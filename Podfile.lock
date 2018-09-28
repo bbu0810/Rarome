@@ -1,0 +1,37 @@
+PODS:
+  - DropDown (2.3.2)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - XLPagerTabStrip (5.0.0)
+
+DEPENDENCIES:
+  - DropDown
+  - GoogleMaps
+  - XLPagerTabStrip (from `https://github.com/KelvinJin/XLPagerTabStrip`, branch `swift3`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DropDown
+    - GoogleMaps
+
+EXTERNAL SOURCES:
+  XLPagerTabStrip:
+    :branch: swift3
+    :git: https://github.com/KelvinJin/XLPagerTabStrip
+
+CHECKOUT OPTIONS:
+  XLPagerTabStrip:
+    :commit: 99e3cbd5e6b99bb6b1fdf25f4af58fe2e38ad308
+    :git: https://github.com/KelvinJin/XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  DropDown: 7f87abecc28f9b4edad810fe1211c5c018c257e5
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  XLPagerTabStrip: 87b8b705f9a7178e76a063ffaa2d70045944a965
+
+PODFILE CHECKSUM: b83ffd82ee4b6b41942a17a3802fd7b1b51126a3
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,6 @@
+framework module Pods_Rarome {
+  umbrella header "Pods-Rarome-umbrella.h"
+
+  export *
+  module * { export * }
+}

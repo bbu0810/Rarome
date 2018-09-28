@@ -1,0 +1,1047 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02CAE638EF1CEEBD6F5740498F9CA3F8 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FEDBDCAEB372C7042F11E5789E6B5F /* DropDown.swift */; };
+		0708BC1A407F58C1B3C1AD2B04B65544 /* FXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 360DA572AF48AC14E334CFA02A65804B /* FXPageControl.m */; };
+		098F056D90AF9CD3FD60D8A81DF043B6 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BA9D83839B921A5D0A687B6BB9ECA /* DropDownCell.swift */; };
+		0AA76430E5ED007E16046AEE81CF754B /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA4C9B1F1AC52CDCEEEDE470EEC908F /* BarView.swift */; };
+		15AA8BA0FB8DF7976D0419D7EAA84DF2 /* XLPagerTabStrip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED1B32180E7BE83381CE5055A6AD60A /* XLPagerTabStrip-dummy.m */; };
+		2E7E74DF0C455B0BC43BFDD1D0163E64 /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 23C2667763F7E6EEDA4D6160701BB99B /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33CAA73F940BA7B854C7CC2C14A90A48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		37C293AEA575D6E5186739D1B07805F2 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B02F8FF007C3713747676CBB6A48C69 /* DropDownCell.xib */; };
+		39390730097DA2B26C51877B78A20DE9 /* FXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = E38A947A66B9ED85B1C728B5DB95A436 /* FXPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39E28F55AB13FA63EA477A82300C8514 /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB9D3E59D0AB0324053159E26DBDCF9 /* PagerTabStripViewController.swift */; };
+		3AAF59DD99121A2959B47B25B59DAA8F /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41375C342F671F407FDA5F0AE922B8BE /* BarPagerTabStripViewController.swift */; };
+		40493DA15381ADCBC605C85ECEAEEB6E /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F4DD3CFA9A3DA1E3A0EE0F9628B3B6 /* ButtonBarViewCell.swift */; };
+		442ADADA3215E1E5CA1557E708D4228C /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2969ADE78182A42BDFD763C03A917B3 /* DropDown+Appearance.swift */; };
+		52E276BD4E74D3C1FA94B1289AE5A41F /* ButtonCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = B396B826D952300FCDD0D54E3B821226 /* ButtonCell.xib */; };
+		605F8D5CAB425351CF0BF7E7E30522C4 /* Pods-Rarome-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F7C2B321C69336A3FE0DCB96133095 /* Pods-Rarome-dummy.m */; };
+		6585698D90A1D7FFD80C9EE9909852FA /* SegmentedPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC505667C060DE81569656E42E7A64 /* SegmentedPagerTabStripViewController.swift */; };
+		6AA10E279722F41B4200B9F8D245843A /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3737DD7D6D9D348FD73AD0C8C0765D8E /* IndicatorInfo.swift */; };
+		6C939C7FBD33AAA715487A30505B0B09 /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700A5675DC3C5FEFDEB0A919144AB60A /* ButtonBarPagerTabStripViewController.swift */; };
+		94FE95980A7F7B6783A8FB81983AB6E8 /* Pods-Rarome-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FC6C4393FE30D4B03675215885E36E /* Pods-Rarome-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D0221E27E37CDA9DF26DD3CFA56D75B /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B1CCDBDDD6E00387558ECE87164E7 /* DPDKeyboardListener.swift */; };
+		A401CF18D15DF246F40FAC4E8F06CBC7 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B985BD19762EF9476858E3AD73104 /* DPDUIView+Extension.swift */; };
+		A812E7811821F66B3B7499F6F1B513BA /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA844E419355E62BBA0595A1104AC432 /* DPDConstants.swift */; };
+		AC6581D9387744158B44BE683403C3BC /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4563F97A77323911172AE3D0DB39F4BC /* DropDown-dummy.m */; };
+		BB9781B2B18F5418FB36B85DB1276A06 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE020D47CFC45A0813502544EE28E7 /* SwipeDirection.swift */; };
+		BDC9E2BD613298DE29B2DA9B2A8C06AF /* TwitterPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6E6FCCF3E9A7B4DED59BC8B7D85A54 /* TwitterPagerTabStripViewController.swift */; };
+		C113D1FFE9CCD9E66E9247449DA5B9EC /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82B29B9AA5E551FF579D5B50364C21 /* PagerTabStripBehaviour.swift */; };
+		C60FE7B1F3C093E0AAD9F126C0B036FD /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7EF59829A624275144D07C9389B626 /* BaseButtonBarPagerTabStripViewController.swift */; };
+		D0E5CDC5A8B75DC62306A555E3F9F8F9 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B396B826D952300FCDD0D54E3B821226 /* ButtonCell.xib */; };
+		E5BA237CA30B5B01373DAD85F9315538 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		E5D35CC6776C6E9A2E83FE508F485FFF /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBFE4DC75BD3497E6F59208859E8D3A /* ButtonBarView.swift */; };
+		E768242F7E5CDBDE4A44BFD14F002F83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		E8ACE7B9659BBB41A07D607D63B7187F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
+		ECE27B53A6B931F6000ADE3B366BF158 /* XLPagerTabStrip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A5F7DB55AB6C474F81E024A912E424C /* XLPagerTabStrip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F15EB17D61AA4C9056377ED4F58A0093 /* XLPagerTabStrip.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2ECCD0A0976AFCBC0A060129953E383 /* XLPagerTabStrip.bundle */; };
+		FC813B7F3DBFDB462419573798C56690 /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81D409331F869EB39F5ED7A8FB0754 /* PagerTabStripError.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63A023C7D5E0A96B4093512EC7DFF158 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25C11EF558FF12FAF6748622DE8D30AB;
+			remoteInfo = XLPagerTabStrip;
+		};
+		8AFF594FB0D74EAB09F1AA8CC3650822 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5168099F2EBFC99A707C03C9EADE01A5;
+			remoteInfo = DropDown;
+		};
+		F800F492861979FD5BD0982A17B7F8AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40E0CA5BA6F564AA3087DB91A13A82B3;
+			remoteInfo = "XLPagerTabStrip-XLPagerTabStrip";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0ABAE6DE950BC32E644FB4527B04A1C7 /* XLPagerTabStrip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-prefix.pch"; sourceTree = "<group>"; };
+		0B3BA9D83839B921A5D0A687B6BB9ECA /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
+		0CA22866A262D89300FE44A98BD708D5 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		0E24CFF42C34744870BF64B507DB98CC /* XLPagerTabStrip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLPagerTabStrip.xcconfig; sourceTree = "<group>"; };
+		1135E58EB34CC44F46E1C37B2047E165 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		19C1B7617A8E972AACE1A1FE886242EB /* Pods-Rarome-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rarome-acknowledgements.markdown"; sourceTree = "<group>"; };
+		23C2667763F7E6EEDA4D6160701BB99B /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
+		25FC6C4393FE30D4B03675215885E36E /* Pods-Rarome-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rarome-umbrella.h"; sourceTree = "<group>"; };
+		2A7AE850DCF5CEB95E87C5E1FCE5297A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		349C843B1CA94C9E8906E06D67C5C6A8 /* XLPagerTabStrip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XLPagerTabStrip.modulemap; sourceTree = "<group>"; };
+		353B1CCDBDDD6E00387558ECE87164E7 /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
+		360DA572AF48AC14E334CFA02A65804B /* FXPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXPageControl.m; path = Sources/FXPageControl.m; sourceTree = "<group>"; };
+		3737DD7D6D9D348FD73AD0C8C0765D8E /* IndicatorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndicatorInfo.swift; path = Sources/IndicatorInfo.swift; sourceTree = "<group>"; };
+		38A723147A5FA796638378B07F3B2345 /* Pods-Rarome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rarome.debug.xcconfig"; sourceTree = "<group>"; };
+		3ABE020D47CFC45A0813502544EE28E7 /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/SwipeDirection.swift; sourceTree = "<group>"; };
+		3C085970F78B1BFEAF863630D3F23B6D /* Pods_Rarome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Rarome.framework; path = "Pods-Rarome.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ED1B32180E7BE83381CE5055A6AD60A /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
+		3F0AAB2BB6282774BB6B6972D351B1D5 /* ResourceBundle-XLPagerTabStrip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-XLPagerTabStrip-Info.plist"; sourceTree = "<group>"; };
+		41375C342F671F407FDA5F0AE922B8BE /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPagerTabStripViewController.swift; path = Sources/BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		43E60A5BAD91F9B016D7B94FD469E364 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XLPagerTabStrip.framework; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4563F97A77323911172AE3D0DB39F4BC /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
+		461B985BD19762EF9476858E3AD73104 /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
+		47FEDBDCAEB372C7042F11E5789E6B5F /* DropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDown.swift; path = DropDown/src/DropDown.swift; sourceTree = "<group>"; };
+		4C81D409331F869EB39F5ED7A8FB0754 /* PagerTabStripError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripError.swift; path = Sources/PagerTabStripError.swift; sourceTree = "<group>"; };
+		64BCBAAD7143C77BAE587C58954ED5B0 /* Pods-Rarome.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Rarome.modulemap"; sourceTree = "<group>"; };
+		6EA4C9B1F1AC52CDCEEEDE470EEC908F /* BarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarView.swift; path = Sources/BarView.swift; sourceTree = "<group>"; };
+		700A5675DC3C5FEFDEB0A919144AB60A /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarPagerTabStripViewController.swift; path = Sources/ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		755333E19A393FC95D43E689E8B6C39D /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		7A5F7DB55AB6C474F81E024A912E424C /* XLPagerTabStrip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-umbrella.h"; sourceTree = "<group>"; };
+		7F70B86C4535948DF92036B4D9CDEB3B /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		7FBFE4DC75BD3497E6F59208859E8D3A /* ButtonBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarView.swift; path = Sources/ButtonBarView.swift; sourceTree = "<group>"; };
+		80B4C055F6D1EE090244BEC74CD5F0BF /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DropDown.framework; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		829F3559E8D92F3A73C22F39D836CFA8 /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DropDown.modulemap; sourceTree = "<group>"; };
+		86EC505667C060DE81569656E42E7A64 /* SegmentedPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedPagerTabStripViewController.swift; path = Sources/SegmentedPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		8B02F8FF007C3713747676CBB6A48C69 /* DropDownCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DropDownCell.xib; path = DropDown/resources/DropDownCell.xib; sourceTree = "<group>"; };
+		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		913D7574E0B8BA5359645867B22D407C /* Pods-Rarome-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rarome-frameworks.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97F4DD3CFA9A3DA1E3A0EE0F9628B3B6 /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarViewCell.swift; path = Sources/ButtonBarViewCell.swift; sourceTree = "<group>"; };
+		9B524E71ACC40AF18282E2205AD1633F /* DropDown.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.xcconfig; sourceTree = "<group>"; };
+		9BB9D3E59D0AB0324053159E26DBDCF9 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripViewController.swift; path = Sources/PagerTabStripViewController.swift; sourceTree = "<group>"; };
+		A3777F88F9F4C940FE5633D8830A04CE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA6FB354588882636A71492BBB799C13 /* Pods-Rarome-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rarome-resources.sh"; sourceTree = "<group>"; };
+		B396B826D952300FCDD0D54E3B821226 /* ButtonCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonCell.xib; path = Sources/ButtonCell.xib; sourceTree = "<group>"; };
+		B5C865542E552E9DA11B3FAB02392BBC /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
+		B699171ADDA63FB8D3010ECF5CB9CE20 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BD82B29B9AA5E551FF579D5B50364C21 /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripBehaviour.swift; path = Sources/PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
+		BE7EF59829A624275144D07C9389B626 /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseButtonBarPagerTabStripViewController.swift; path = Sources/BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		CA844E419355E62BBA0595A1104AC432 /* DPDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDConstants.swift; path = DropDown/helpers/DPDConstants.swift; sourceTree = "<group>"; };
+		D2969ADE78182A42BDFD763C03A917B3 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DropDown+Appearance.swift"; path = "DropDown/src/DropDown+Appearance.swift"; sourceTree = "<group>"; };
+		D5F7C2B321C69336A3FE0DCB96133095 /* Pods-Rarome-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rarome-dummy.m"; sourceTree = "<group>"; };
+		DC6E6FCCF3E9A7B4DED59BC8B7D85A54 /* TwitterPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwitterPagerTabStripViewController.swift; path = Sources/TwitterPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		E2ECCD0A0976AFCBC0A060129953E383 /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = XLPagerTabStrip.bundle; path = "XLPagerTabStrip-XLPagerTabStrip.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E38A947A66B9ED85B1C728B5DB95A436 /* FXPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXPageControl.h; path = Sources/FXPageControl.h; sourceTree = "<group>"; };
+		FA2B471B20271124ACCD88BD8892AC05 /* Pods-Rarome-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rarome-acknowledgements.plist"; sourceTree = "<group>"; };
+		FAEBA7D63E5C0CEAC185105709CB2461 /* Pods-Rarome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rarome.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FE28484C632D94C9779E4E74AE0BD29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5BA237CA30B5B01373DAD85F9315538 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5065FF139010B60B8AE191379D6F2996 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7467DC5B8D2D48D6DC77914A104F1F95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E768242F7E5CDBDE4A44BFD14F002F83 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B422DFD5CF0C2454E02D0E034A345506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33CAA73F940BA7B854C7CC2C14A90A48 /* Foundation.framework in Frameworks */,
+				E8ACE7B9659BBB41A07D607D63B7187F /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
+				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1145AB37D94649F5A03256A15D2FE87B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B699171ADDA63FB8D3010ECF5CB9CE20 /* Info.plist */,
+				3F0AAB2BB6282774BB6B6972D351B1D5 /* ResourceBundle-XLPagerTabStrip-Info.plist */,
+				349C843B1CA94C9E8906E06D67C5C6A8 /* XLPagerTabStrip.modulemap */,
+				0E24CFF42C34744870BF64B507DB98CC /* XLPagerTabStrip.xcconfig */,
+				3ED1B32180E7BE83381CE5055A6AD60A /* XLPagerTabStrip-dummy.m */,
+				0ABAE6DE950BC32E644FB4527B04A1C7 /* XLPagerTabStrip-prefix.pch */,
+				7A5F7DB55AB6C474F81E024A912E424C /* XLPagerTabStrip-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/XLPagerTabStrip";
+			sourceTree = "<group>";
+		};
+		1B414F4BCC660A5C8B870B207CC83BC4 /* Pods-Rarome */ = {
+			isa = PBXGroup;
+			children = (
+				2A7AE850DCF5CEB95E87C5E1FCE5297A /* Info.plist */,
+				64BCBAAD7143C77BAE587C58954ED5B0 /* Pods-Rarome.modulemap */,
+				19C1B7617A8E972AACE1A1FE886242EB /* Pods-Rarome-acknowledgements.markdown */,
+				FA2B471B20271124ACCD88BD8892AC05 /* Pods-Rarome-acknowledgements.plist */,
+				D5F7C2B321C69336A3FE0DCB96133095 /* Pods-Rarome-dummy.m */,
+				913D7574E0B8BA5359645867B22D407C /* Pods-Rarome-frameworks.sh */,
+				AA6FB354588882636A71492BBB799C13 /* Pods-Rarome-resources.sh */,
+				25FC6C4393FE30D4B03675215885E36E /* Pods-Rarome-umbrella.h */,
+				38A723147A5FA796638378B07F3B2345 /* Pods-Rarome.debug.xcconfig */,
+				FAEBA7D63E5C0CEAC185105709CB2461 /* Pods-Rarome.release.xcconfig */,
+			);
+			name = "Pods-Rarome";
+			path = "Target Support Files/Pods-Rarome";
+			sourceTree = "<group>";
+		};
+		2C40D3DB552D02755ACB67EC0A9BE434 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				FB919947792C07683037FA8D29E92971 /* Base */,
+				A64444968ADEA7C3D96944B6381F41BF /* Maps */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		3DCAC7D0AAC9BA33CE45F26B1D85050E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				755333E19A393FC95D43E689E8B6C39D /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42DE6B3EBCBB36BA5626B6D7F1E20BEE /* XLPagerTabStrip */ = {
+			isa = PBXGroup;
+			children = (
+				41375C342F671F407FDA5F0AE922B8BE /* BarPagerTabStripViewController.swift */,
+				6EA4C9B1F1AC52CDCEEEDE470EEC908F /* BarView.swift */,
+				BE7EF59829A624275144D07C9389B626 /* BaseButtonBarPagerTabStripViewController.swift */,
+				700A5675DC3C5FEFDEB0A919144AB60A /* ButtonBarPagerTabStripViewController.swift */,
+				7FBFE4DC75BD3497E6F59208859E8D3A /* ButtonBarView.swift */,
+				97F4DD3CFA9A3DA1E3A0EE0F9628B3B6 /* ButtonBarViewCell.swift */,
+				B396B826D952300FCDD0D54E3B821226 /* ButtonCell.xib */,
+				E38A947A66B9ED85B1C728B5DB95A436 /* FXPageControl.h */,
+				360DA572AF48AC14E334CFA02A65804B /* FXPageControl.m */,
+				3737DD7D6D9D348FD73AD0C8C0765D8E /* IndicatorInfo.swift */,
+				BD82B29B9AA5E551FF579D5B50364C21 /* PagerTabStripBehaviour.swift */,
+				4C81D409331F869EB39F5ED7A8FB0754 /* PagerTabStripError.swift */,
+				9BB9D3E59D0AB0324053159E26DBDCF9 /* PagerTabStripViewController.swift */,
+				86EC505667C060DE81569656E42E7A64 /* SegmentedPagerTabStripViewController.swift */,
+				3ABE020D47CFC45A0813502544EE28E7 /* SwipeDirection.swift */,
+				DC6E6FCCF3E9A7B4DED59BC8B7D85A54 /* TwitterPagerTabStripViewController.swift */,
+				4E170650CB9BDE834894829B564FE93C /* Resources */,
+				1145AB37D94649F5A03256A15D2FE87B /* Support Files */,
+			);
+			name = XLPagerTabStrip;
+			path = XLPagerTabStrip;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47977AB08E9C5B9288E1858B7B90D821 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B414F4BCC660A5C8B870B207CC83BC4 /* Pods-Rarome */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4E170650CB9BDE834894829B564FE93C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		68E69CCD7139EFF0714E01EAB06C7944 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8B02F8FF007C3713747676CBB6A48C69 /* DropDownCell.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		76A0F2C775D67CC0ECE2A64689B02595 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CA22866A262D89300FE44A98BD708D5 /* GoogleMaps.framework */,
+				1135E58EB34CC44F46E1C37B2047E165 /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C38D5DBE77401CB45F0D6DF330274AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBEC3A4B8D4A465AAEF2F95FF4FD9019 /* DropDown */,
+				2C40D3DB552D02755ACB67EC0A9BE434 /* GoogleMaps */,
+				42DE6B3EBCBB36BA5626B6D7F1E20BEE /* XLPagerTabStrip */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				7C38D5DBE77401CB45F0D6DF330274AD /* Pods */,
+				F6F91B17A64273D6D51728DFA24F3F8D /* Products */,
+				47977AB08E9C5B9288E1858B7B90D821 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		929CBF3083DCC80D98FA7E79C6D186A0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				829F3559E8D92F3A73C22F39D836CFA8 /* DropDown.modulemap */,
+				9B524E71ACC40AF18282E2205AD1633F /* DropDown.xcconfig */,
+				4563F97A77323911172AE3D0DB39F4BC /* DropDown-dummy.m */,
+				B5C865542E552E9DA11B3FAB02392BBC /* DropDown-prefix.pch */,
+				23C2667763F7E6EEDA4D6160701BB99B /* DropDown-umbrella.h */,
+				A3777F88F9F4C940FE5633D8830A04CE /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DropDown";
+			sourceTree = "<group>";
+		};
+		A64444968ADEA7C3D96944B6381F41BF /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				76A0F2C775D67CC0ECE2A64689B02595 /* Frameworks */,
+				DFFC3BD4F17D7B23F3CEAB641473B85F /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		DBEC3A4B8D4A465AAEF2F95FF4FD9019 /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				CA844E419355E62BBA0595A1104AC432 /* DPDConstants.swift */,
+				353B1CCDBDDD6E00387558ECE87164E7 /* DPDKeyboardListener.swift */,
+				461B985BD19762EF9476858E3AD73104 /* DPDUIView+Extension.swift */,
+				47FEDBDCAEB372C7042F11E5789E6B5F /* DropDown.swift */,
+				D2969ADE78182A42BDFD763C03A917B3 /* DropDown+Appearance.swift */,
+				0B3BA9D83839B921A5D0A687B6BB9ECA /* DropDownCell.swift */,
+				68E69CCD7139EFF0714E01EAB06C7944 /* Resources */,
+				929CBF3083DCC80D98FA7E79C6D186A0 /* Support Files */,
+			);
+			name = DropDown;
+			path = DropDown;
+			sourceTree = "<group>";
+		};
+		DFFC3BD4F17D7B23F3CEAB641473B85F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F70B86C4535948DF92036B4D9CDEB3B /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F6F91B17A64273D6D51728DFA24F3F8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80B4C055F6D1EE090244BEC74CD5F0BF /* DropDown.framework */,
+				3C085970F78B1BFEAF863630D3F23B6D /* Pods_Rarome.framework */,
+				E2ECCD0A0976AFCBC0A060129953E383 /* XLPagerTabStrip.bundle */,
+				43E60A5BAD91F9B016D7B94FD469E364 /* XLPagerTabStrip.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB919947792C07683037FA8D29E92971 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAC7D0AAC9BA33CE45F26B1D85050E /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0AE4829F9DD865B46405FA53D52BB347 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39390730097DA2B26C51877B78A20DE9 /* FXPageControl.h in Headers */,
+				ECE27B53A6B931F6000ADE3B366BF158 /* XLPagerTabStrip-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1904CD5E5CEA9226AFC355E19C3EB159 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E7E74DF0C455B0BC43BFDD1D0163E64 /* DropDown-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA60BB3FF2C26C32BB21E1CD8026138 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94FE95980A7F7B6783A8FB81983AB6E8 /* Pods-Rarome-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		25C11EF558FF12FAF6748622DE8D30AB /* XLPagerTabStrip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69C5A3502B09AD2A5F77B8496E822A3C /* Build configuration list for PBXNativeTarget "XLPagerTabStrip" */;
+			buildPhases = (
+				FA481F75CB30EDB979F189A0BE6DDD43 /* Sources */,
+				B422DFD5CF0C2454E02D0E034A345506 /* Frameworks */,
+				161796D043B1DD606EE1C4D17F46D4E3 /* Resources */,
+				0AE4829F9DD865B46405FA53D52BB347 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BF0CB40AEA1357995E58C6C95D9F3EE /* PBXTargetDependency */,
+			);
+			name = XLPagerTabStrip;
+			productName = XLPagerTabStrip;
+			productReference = 43E60A5BAD91F9B016D7B94FD469E364 /* XLPagerTabStrip.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		40E0CA5BA6F564AA3087DB91A13A82B3 /* XLPagerTabStrip-XLPagerTabStrip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D15AB55806ECA63B8977548A66BB008 /* Build configuration list for PBXNativeTarget "XLPagerTabStrip-XLPagerTabStrip" */;
+			buildPhases = (
+				E7B77C5E1A84F1F7A1A8263750F8843F /* Sources */,
+				5065FF139010B60B8AE191379D6F2996 /* Frameworks */,
+				4E03597796A85987245B28038211941E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "XLPagerTabStrip-XLPagerTabStrip";
+			productName = "XLPagerTabStrip-XLPagerTabStrip";
+			productReference = E2ECCD0A0976AFCBC0A060129953E383 /* XLPagerTabStrip.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		5168099F2EBFC99A707C03C9EADE01A5 /* DropDown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45143614893062803984DA50AB90C1D5 /* Build configuration list for PBXNativeTarget "DropDown" */;
+			buildPhases = (
+				ED45CA897A4B81CB8204042001D7AEE8 /* Sources */,
+				3FE28484C632D94C9779E4E74AE0BD29 /* Frameworks */,
+				D7D924A57BC65B5D41E46B156A8DCF2B /* Resources */,
+				1904CD5E5CEA9226AFC355E19C3EB159 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropDown;
+			productName = DropDown;
+			productReference = 80B4C055F6D1EE090244BEC74CD5F0BF /* DropDown.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B525B80006864844744DE7042D097E5A /* Pods-Rarome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7DCCE6F3DEDF12427AA99E209C6EDD9 /* Build configuration list for PBXNativeTarget "Pods-Rarome" */;
+			buildPhases = (
+				28AAA0997C1766C18EDE364E67573271 /* Sources */,
+				7467DC5B8D2D48D6DC77914A104F1F95 /* Frameworks */,
+				2CA60BB3FF2C26C32BB21E1CD8026138 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF04E96A75EF20434ABC87CF3173D7E9 /* PBXTargetDependency */,
+				5F2D4CC14FD52172CC0527686DCD867F /* PBXTargetDependency */,
+			);
+			name = "Pods-Rarome";
+			productName = "Pods-Rarome";
+			productReference = 3C085970F78B1BFEAF863630D3F23B6D /* Pods_Rarome.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = F6F91B17A64273D6D51728DFA24F3F8D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5168099F2EBFC99A707C03C9EADE01A5 /* DropDown */,
+				B525B80006864844744DE7042D097E5A /* Pods-Rarome */,
+				25C11EF558FF12FAF6748622DE8D30AB /* XLPagerTabStrip */,
+				40E0CA5BA6F564AA3087DB91A13A82B3 /* XLPagerTabStrip-XLPagerTabStrip */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		161796D043B1DD606EE1C4D17F46D4E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15EB17D61AA4C9056377ED4F58A0093 /* XLPagerTabStrip.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E03597796A85987245B28038211941E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E5CDC5A8B75DC62306A555E3F9F8F9 /* ButtonCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7D924A57BC65B5D41E46B156A8DCF2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37C293AEA575D6E5186739D1B07805F2 /* DropDownCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28AAA0997C1766C18EDE364E67573271 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				605F8D5CAB425351CF0BF7E7E30522C4 /* Pods-Rarome-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B77C5E1A84F1F7A1A8263750F8843F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED45CA897A4B81CB8204042001D7AEE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A812E7811821F66B3B7499F6F1B513BA /* DPDConstants.swift in Sources */,
+				9D0221E27E37CDA9DF26DD3CFA56D75B /* DPDKeyboardListener.swift in Sources */,
+				A401CF18D15DF246F40FAC4E8F06CBC7 /* DPDUIView+Extension.swift in Sources */,
+				442ADADA3215E1E5CA1557E708D4228C /* DropDown+Appearance.swift in Sources */,
+				AC6581D9387744158B44BE683403C3BC /* DropDown-dummy.m in Sources */,
+				02CAE638EF1CEEBD6F5740498F9CA3F8 /* DropDown.swift in Sources */,
+				098F056D90AF9CD3FD60D8A81DF043B6 /* DropDownCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA481F75CB30EDB979F189A0BE6DDD43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AAF59DD99121A2959B47B25B59DAA8F /* BarPagerTabStripViewController.swift in Sources */,
+				0AA76430E5ED007E16046AEE81CF754B /* BarView.swift in Sources */,
+				C60FE7B1F3C093E0AAD9F126C0B036FD /* BaseButtonBarPagerTabStripViewController.swift in Sources */,
+				6C939C7FBD33AAA715487A30505B0B09 /* ButtonBarPagerTabStripViewController.swift in Sources */,
+				E5D35CC6776C6E9A2E83FE508F485FFF /* ButtonBarView.swift in Sources */,
+				40493DA15381ADCBC605C85ECEAEEB6E /* ButtonBarViewCell.swift in Sources */,
+				52E276BD4E74D3C1FA94B1289AE5A41F /* ButtonCell.xib in Sources */,
+				0708BC1A407F58C1B3C1AD2B04B65544 /* FXPageControl.m in Sources */,
+				6AA10E279722F41B4200B9F8D245843A /* IndicatorInfo.swift in Sources */,
+				C113D1FFE9CCD9E66E9247449DA5B9EC /* PagerTabStripBehaviour.swift in Sources */,
+				FC813B7F3DBFDB462419573798C56690 /* PagerTabStripError.swift in Sources */,
+				39E28F55AB13FA63EA477A82300C8514 /* PagerTabStripViewController.swift in Sources */,
+				6585698D90A1D7FFD80C9EE9909852FA /* SegmentedPagerTabStripViewController.swift in Sources */,
+				BB9781B2B18F5418FB36B85DB1276A06 /* SwipeDirection.swift in Sources */,
+				BDC9E2BD613298DE29B2DA9B2A8C06AF /* TwitterPagerTabStripViewController.swift in Sources */,
+				15AA8BA0FB8DF7976D0419D7EAA84DF2 /* XLPagerTabStrip-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F2D4CC14FD52172CC0527686DCD867F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XLPagerTabStrip;
+			target = 25C11EF558FF12FAF6748622DE8D30AB /* XLPagerTabStrip */;
+			targetProxy = 63A023C7D5E0A96B4093512EC7DFF158 /* PBXContainerItemProxy */;
+		};
+		8BF0CB40AEA1357995E58C6C95D9F3EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "XLPagerTabStrip-XLPagerTabStrip";
+			target = 40E0CA5BA6F564AA3087DB91A13A82B3 /* XLPagerTabStrip-XLPagerTabStrip */;
+			targetProxy = F800F492861979FD5BD0982A17B7F8AF /* PBXContainerItemProxy */;
+		};
+		DF04E96A75EF20434ABC87CF3173D7E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DropDown;
+			target = 5168099F2EBFC99A707C03C9EADE01A5 /* DropDown */;
+			targetProxy = 8AFF594FB0D74EAB09F1AA8CC3650822 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4DC8223730D1C10F525E790427B29567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B524E71ACC40AF18282E2205AD1633F /* DropDown.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_MODULE_NAME = DropDown;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		53F03A7551A367BFCCB903A5DA1D1700 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAEBA7D63E5C0CEAC185105709CB2461 /* Pods-Rarome.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Rarome/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Rarome/Pods-Rarome.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		66CDFB3268EA762B0DB1679A1F81E5F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38A723147A5FA796638378B07F3B2345 /* Pods-Rarome.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Rarome/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Rarome/Pods-Rarome.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6CF815F478C3DEC8B4899ED6BB6B3AA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E24CFF42C34744870BF64B507DB98CC /* XLPagerTabStrip.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip.modulemap";
+				PRODUCT_MODULE_NAME = XLPagerTabStrip;
+				PRODUCT_NAME = XLPagerTabStrip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		832B04EF8C88651C8D1DF7EF0BA1E386 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B524E71ACC40AF18282E2205AD1633F /* DropDown.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_MODULE_NAME = DropDown;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		92F9C2E4D84BA32B4D46CBC406CBEBE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E24CFF42C34744870BF64B507DB98CC /* XLPagerTabStrip.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XLPagerTabStrip";
+				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/ResourceBundle-XLPagerTabStrip-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = XLPagerTabStrip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		BE45B66F8F031817A758A1479CFE5597 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E24CFF42C34744870BF64B507DB98CC /* XLPagerTabStrip.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip.modulemap";
+				PRODUCT_MODULE_NAME = XLPagerTabStrip;
+				PRODUCT_NAME = XLPagerTabStrip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E5A8896E67DB221F6C167F525F82F6AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E24CFF42C34744870BF64B507DB98CC /* XLPagerTabStrip.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/XLPagerTabStrip";
+				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/ResourceBundle-XLPagerTabStrip-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = XLPagerTabStrip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */,
+				AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45143614893062803984DA50AB90C1D5 /* Build configuration list for PBXNativeTarget "DropDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832B04EF8C88651C8D1DF7EF0BA1E386 /* Debug */,
+				4DC8223730D1C10F525E790427B29567 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D15AB55806ECA63B8977548A66BB008 /* Build configuration list for PBXNativeTarget "XLPagerTabStrip-XLPagerTabStrip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92F9C2E4D84BA32B4D46CBC406CBEBE0 /* Debug */,
+				E5A8896E67DB221F6C167F525F82F6AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69C5A3502B09AD2A5F77B8496E822A3C /* Build configuration list for PBXNativeTarget "XLPagerTabStrip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE45B66F8F031817A758A1479CFE5597 /* Debug */,
+				6CF815F478C3DEC8B4899ED6BB6B3AA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7DCCE6F3DEDF12427AA99E209C6EDD9 /* Build configuration list for PBXNativeTarget "Pods-Rarome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66CDFB3268EA762B0DB1679A1F81E5F3 /* Debug */,
+				53F03A7551A367BFCCB903A5DA1D1700 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

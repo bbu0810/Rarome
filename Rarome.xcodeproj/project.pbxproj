@@ -7,6 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		489F293B07F022D2E16D74D2 /* Pods_Rarome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA463A787D40FC6587725BC4 /* Pods_Rarome.framework */; };
+		D91323402108FB43001A2E88 /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D913233F2108FB43001A2E88 /* UpdateProfileViewController.swift */; };
+		D91323442109BE2A001A2E88 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91323432109BE2A001A2E88 /* ParentViewController.swift */; };
+		D91323462109F57C001A2E88 /* Grade_WiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91323452109F57C001A2E88 /* Grade_WiseViewController.swift */; };
+		D91323482109F599001A2E88 /* Term_WiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91323472109F599001A2E88 /* Term_WiseViewController.swift */; };
+		D913234A2109F5B2001A2E88 /* Student_WiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91323492109F5B2001A2E88 /* Student_WiseViewController.swift */; };
+		D913234C210BA43F001A2E88 /* GlobalConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = D913234B210BA43F001A2E88 /* GlobalConst.swift */; };
+		D92D357D2113F73300E92EA8 /* GradRoutineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D357C2113F73300E92EA8 /* GradRoutineTableViewCell.swift */; };
+		D92D357F2114000A00E92EA8 /* LibraryInfomationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D357E2114000A00E92EA8 /* LibraryInfomationTableViewCell.swift */; };
+		D92D3581211407D700E92EA8 /* TransportInformationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D3580211407D700E92EA8 /* TransportInformationTableCell.swift */; };
+		D92F13C5210481FA00130F38 /* ComfirmPasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92F13C4210481FA00130F38 /* ComfirmPasscodeViewController.swift */; };
+		D92F13C72104EF8000130F38 /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92F13C62104EF8000130F38 /* MainHomeViewController.swift */; };
+		D93932A8210D9AAB00183C5B /* StudentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93932A7210D9AAB00183C5B /* StudentInfoViewController.swift */; };
+		D93932AA210ECCF400183C5B /* StudentInfoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93932A9210ECCF400183C5B /* StudentInfoTableCell.swift */; };
+		D93932AE210FF49D00183C5B /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93932AD210FF49D00183C5B /* StudentTableViewController.swift */; };
+		D93932B02111A06700183C5B /* StudentDocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93932AF2111A06700183C5B /* StudentDocumentsViewController.swift */; };
+		D93B454F2111CF2900B4A137 /* StudenDocumentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B454E2111CF2900B4A137 /* StudenDocumentsCell.swift */; };
+		D93B45512112C45700B4A137 /* StudentIInfomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B45502112C45700B4A137 /* StudentIInfomationViewController.swift */; };
+		D946B80121191B1D004F9092 /* EmployeeInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D946B80021191B1D004F9092 /* EmployeeInformationViewController.swift */; };
+		D946B80321192F3B004F9092 /* DepartmentTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D946B80221192F3B004F9092 /* DepartmentTableTableViewController.swift */; };
+		D947F9CF21133211003D9D6D /* GeneralInfomationTabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D947F9CE21133211003D9D6D /* GeneralInfomationTabelCell.swift */; };
+		D947F9D121137816003D9D6D /* ParentInfoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D947F9D021137816003D9D6D /* ParentInfoTableCell.swift */; };
+		D9700ACF211412F3004528BB /* DomitoryInformationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9700ACE211412F3004528BB /* DomitoryInformationTableCell.swift */; };
+		D9700AD1211423EF004528BB /* DocumentsTabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9700AD0211423EF004528BB /* DocumentsTabelViewCell.swift */; };
+		D9700AD321149F0D004528BB /* DetailDocumentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9700AD221149F0D004528BB /* DetailDocumentsTableViewCell.swift */; };
+		D9700AD52114CABD004528BB /* ExtracurricularActivitiesAwardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9700AD42114CABD004528BB /* ExtracurricularActivitiesAwardsTableViewCell.swift */; };
+		D9700AD72114D3E6004528BB /* DetailExtracurricularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9700AD62114D3E6004528BB /* DetailExtracurricularTableViewCell.swift */; };
+		D9A040F32115A7BC007CB5E1 /* MedicalRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A040F22115A7BC007CB5E1 /* MedicalRecordTableViewCell.swift */; };
+		D9A040F5211610EA007CB5E1 /* DetailMedicalHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A040F4211610EA007CB5E1 /* DetailMedicalHistoryTableViewCell.swift */; };
+		D9A040F72116A71D007CB5E1 /* AttendanceRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A040F62116A71D007CB5E1 /* AttendanceRecordTableViewCell.swift */; };
+		D9A040F92117F965007CB5E1 /* DetailAttendaceRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A040F82117F965007CB5E1 /* DetailAttendaceRecordTableViewCell.swift */; };
+		D9A091ED2106AD2500CDD1CB /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A091EC2106AD2500CDD1CB /* GoogleMapViewController.swift */; };
+		D9A091F021070F6A00CDD1CB /* AdminDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A091EF21070F6A00CDD1CB /* AdminDashboardViewController.swift */; };
+		D9A091F321078A1A00CDD1CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A091F221078A1A00CDD1CB /* ProfileViewController.swift */; };
+		D9A091F521078A3A00CDD1CB /* MessageBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A091F421078A3900CDD1CB /* MessageBoxViewController.swift */; };
+		D9A091F72107B68600CDD1CB /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A091F62107B68500CDD1CB /* AttendanceViewController.swift */; };
 		D9C178912100773200588A79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C178902100773200588A79 /* AppDelegate.swift */; };
 		D9C178932100773200588A79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C178922100773200588A79 /* ViewController.swift */; };
 		D9C178962100773200588A79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C178942100773200588A79 /* Main.storyboard */; };
@@ -14,6 +50,7 @@
 		D9C1789B2100773600588A79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C178992100773600588A79 /* LaunchScreen.storyboard */; };
 		D9C178A62100773600588A79 /* RaromeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C178A52100773600588A79 /* RaromeTests.swift */; };
 		D9C178B12100773600588A79 /* RaromeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C178B02100773600588A79 /* RaromeUITests.swift */; };
+		D9C178BF2101ED3E00588A79 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C178BE2101ED3D00588A79 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +71,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E997DF10770B0B4F0BBF58E /* Pods_RaromeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RaromeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97149B24D0609F54A8210204 /* Pods-Rarome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rarome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rarome/Pods-Rarome.debug.xcconfig"; sourceTree = "<group>"; };
+		AA463A787D40FC6587725BC4 /* Pods_Rarome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rarome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D913233F2108FB43001A2E88 /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
+		D91323432109BE2A001A2E88 /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
+		D91323452109F57C001A2E88 /* Grade_WiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade_WiseViewController.swift; sourceTree = "<group>"; };
+		D91323472109F599001A2E88 /* Term_WiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Term_WiseViewController.swift; sourceTree = "<group>"; };
+		D91323492109F5B2001A2E88 /* Student_WiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student_WiseViewController.swift; sourceTree = "<group>"; };
+		D913234B210BA43F001A2E88 /* GlobalConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConst.swift; sourceTree = "<group>"; };
+		D92D357C2113F73300E92EA8 /* GradRoutineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradRoutineTableViewCell.swift; sourceTree = "<group>"; };
+		D92D357E2114000A00E92EA8 /* LibraryInfomationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryInfomationTableViewCell.swift; sourceTree = "<group>"; };
+		D92D3580211407D700E92EA8 /* TransportInformationTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportInformationTableCell.swift; sourceTree = "<group>"; };
+		D92F13C4210481FA00130F38 /* ComfirmPasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComfirmPasscodeViewController.swift; sourceTree = "<group>"; };
+		D92F13C62104EF8000130F38 /* MainHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeViewController.swift; sourceTree = "<group>"; };
+		D93932A7210D9AAB00183C5B /* StudentInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfoViewController.swift; sourceTree = "<group>"; };
+		D93932A9210ECCF400183C5B /* StudentInfoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfoTableCell.swift; sourceTree = "<group>"; };
+		D93932AD210FF49D00183C5B /* StudentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
+		D93932AF2111A06700183C5B /* StudentDocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDocumentsViewController.swift; sourceTree = "<group>"; };
+		D93B454E2111CF2900B4A137 /* StudenDocumentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudenDocumentsCell.swift; sourceTree = "<group>"; };
+		D93B45502112C45700B4A137 /* StudentIInfomationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentIInfomationViewController.swift; sourceTree = "<group>"; };
+		D946B80021191B1D004F9092 /* EmployeeInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeInformationViewController.swift; sourceTree = "<group>"; };
+		D946B80221192F3B004F9092 /* DepartmentTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentTableTableViewController.swift; sourceTree = "<group>"; };
+		D947F9CE21133211003D9D6D /* GeneralInfomationTabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfomationTabelCell.swift; sourceTree = "<group>"; };
+		D947F9D021137816003D9D6D /* ParentInfoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentInfoTableCell.swift; sourceTree = "<group>"; };
+		D9700ACE211412F3004528BB /* DomitoryInformationTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomitoryInformationTableCell.swift; sourceTree = "<group>"; };
+		D9700AD0211423EF004528BB /* DocumentsTabelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsTabelViewCell.swift; sourceTree = "<group>"; };
+		D9700AD221149F0D004528BB /* DetailDocumentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDocumentsTableViewCell.swift; sourceTree = "<group>"; };
+		D9700AD42114CABD004528BB /* ExtracurricularActivitiesAwardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtracurricularActivitiesAwardsTableViewCell.swift; sourceTree = "<group>"; };
+		D9700AD62114D3E6004528BB /* DetailExtracurricularTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExtracurricularTableViewCell.swift; sourceTree = "<group>"; };
+		D9A040F22115A7BC007CB5E1 /* MedicalRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordTableViewCell.swift; sourceTree = "<group>"; };
+		D9A040F4211610EA007CB5E1 /* DetailMedicalHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMedicalHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		D9A040F62116A71D007CB5E1 /* AttendanceRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRecordTableViewCell.swift; sourceTree = "<group>"; };
+		D9A040F82117F965007CB5E1 /* DetailAttendaceRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAttendaceRecordTableViewCell.swift; sourceTree = "<group>"; };
+		D9A091EC2106AD2500CDD1CB /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
+		D9A091EF21070F6A00CDD1CB /* AdminDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDashboardViewController.swift; sourceTree = "<group>"; };
+		D9A091F221078A1A00CDD1CB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D9A091F421078A3900CDD1CB /* MessageBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBoxViewController.swift; sourceTree = "<group>"; };
+		D9A091F62107B68500CDD1CB /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
 		D9C1788D2100773200588A79 /* Rarome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rarome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C178902100773200588A79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9C178922100773200588A79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +122,9 @@
 		D9C178AC2100773600588A79 /* RaromeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaromeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C178B02100773600588A79 /* RaromeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaromeUITests.swift; sourceTree = "<group>"; };
 		D9C178B22100773600588A79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9C178BE2101ED3D00588A79 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E4F23620A5959320C6295FAD /* Pods-Rarome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rarome.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rarome/Pods-Rarome.release.xcconfig"; sourceTree = "<group>"; };
+		F0EE5344D65A7EB47840DF5E /* Pods_RaromeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RaromeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				489F293B07F022D2E16D74D2 /* Pods_Rarome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +153,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A7845CA547E8EE58F59E0D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E997DF10770B0B4F0BBF58E /* Pods_RaromeTests.framework */,
+				F0EE5344D65A7EB47840DF5E /* Pods_RaromeUITests.framework */,
+				AA463A787D40FC6587725BC4 /* Pods_Rarome.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6642891B822CCD25623E102F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97149B24D0609F54A8210204 /* Pods-Rarome.debug.xcconfig */,
+				E4F23620A5959320C6295FAD /* Pods-Rarome.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D946B7FF21191ACF004F9092 /* employeeInfomation */ = {
+			isa = PBXGroup;
+			children = (
+				D946B80021191B1D004F9092 /* EmployeeInformationViewController.swift */,
+				D946B80221192F3B004F9092 /* DepartmentTableTableViewController.swift */,
+			);
+			path = employeeInfomation;
+			sourceTree = "<group>";
+		};
+		D9A091EE21070E0E00CDD1CB /* schooladmin */ = {
+			isa = PBXGroup;
+			children = (
+				D946B7FF21191ACF004F9092 /* employeeInfomation */,
+				D9A091EF21070F6A00CDD1CB /* AdminDashboardViewController.swift */,
+				D9A091F221078A1A00CDD1CB /* ProfileViewController.swift */,
+				D9A091F421078A3900CDD1CB /* MessageBoxViewController.swift */,
+				D9A091F62107B68500CDD1CB /* AttendanceViewController.swift */,
+				D913233F2108FB43001A2E88 /* UpdateProfileViewController.swift */,
+				D91323432109BE2A001A2E88 /* ParentViewController.swift */,
+				D91323452109F57C001A2E88 /* Grade_WiseViewController.swift */,
+				D91323472109F599001A2E88 /* Term_WiseViewController.swift */,
+				D91323492109F5B2001A2E88 /* Student_WiseViewController.swift */,
+				D93932A7210D9AAB00183C5B /* StudentInfoViewController.swift */,
+				D93932A9210ECCF400183C5B /* StudentInfoTableCell.swift */,
+				D93932AD210FF49D00183C5B /* StudentTableViewController.swift */,
+				D93932AF2111A06700183C5B /* StudentDocumentsViewController.swift */,
+				D93B454E2111CF2900B4A137 /* StudenDocumentsCell.swift */,
+				D93B45502112C45700B4A137 /* StudentIInfomationViewController.swift */,
+				D947F9CE21133211003D9D6D /* GeneralInfomationTabelCell.swift */,
+				D947F9D021137816003D9D6D /* ParentInfoTableCell.swift */,
+				D92D357C2113F73300E92EA8 /* GradRoutineTableViewCell.swift */,
+				D92D357E2114000A00E92EA8 /* LibraryInfomationTableViewCell.swift */,
+				D92D3580211407D700E92EA8 /* TransportInformationTableCell.swift */,
+				D9700ACE211412F3004528BB /* DomitoryInformationTableCell.swift */,
+				D9700AD0211423EF004528BB /* DocumentsTabelViewCell.swift */,
+				D9700AD221149F0D004528BB /* DetailDocumentsTableViewCell.swift */,
+				D9700AD42114CABD004528BB /* ExtracurricularActivitiesAwardsTableViewCell.swift */,
+				D9700AD62114D3E6004528BB /* DetailExtracurricularTableViewCell.swift */,
+				D9A040F22115A7BC007CB5E1 /* MedicalRecordTableViewCell.swift */,
+				D9A040F4211610EA007CB5E1 /* DetailMedicalHistoryTableViewCell.swift */,
+				D9A040F62116A71D007CB5E1 /* AttendanceRecordTableViewCell.swift */,
+				D9A040F82117F965007CB5E1 /* DetailAttendaceRecordTableViewCell.swift */,
+			);
+			path = schooladmin;
+			sourceTree = "<group>";
+		};
+		D9A091F121070F8900CDD1CB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D9C178922100773200588A79 /* ViewController.swift */,
+				D92F13C4210481FA00130F38 /* ComfirmPasscodeViewController.swift */,
+				D9C178BE2101ED3D00588A79 /* HomeViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		D9C178842100773200588A79 = {
 			isa = PBXGroup;
 			children = (
 				D9C1788F2100773200588A79 /* Rarome */,
 				D9C178A42100773600588A79 /* RaromeTests */,
-				D9C178AF2100773600588A79 /* RaromeUITests */,
+				D9C178AF2100773600588A79 /*    */,
 				D9C1788E2100773200588A79 /* Products */,
+				6642891B822CCD25623E102F /* Pods */,
+				5A7845CA547E8EE58F59E0D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +253,16 @@
 		D9C1788F2100773200588A79 /* Rarome */ = {
 			isa = PBXGroup;
 			children = (
+				D9A091F121070F8900CDD1CB /* Login */,
+				D9A091EE21070E0E00CDD1CB /* schooladmin */,
 				D9C178902100773200588A79 /* AppDelegate.swift */,
-				D9C178922100773200588A79 /* ViewController.swift */,
 				D9C178942100773200588A79 /* Main.storyboard */,
 				D9C178972100773600588A79 /* Assets.xcassets */,
 				D9C178992100773600588A79 /* LaunchScreen.storyboard */,
 				D9C1789C2100773600588A79 /* Info.plist */,
+				D92F13C62104EF8000130F38 /* MainHomeViewController.swift */,
+				D9A091EC2106AD2500CDD1CB /* GoogleMapViewController.swift */,
+				D913234B210BA43F001A2E88 /* GlobalConst.swift */,
 			);
 			path = Rarome;
 			sourceTree = "<group>";
@@ -116,12 +276,13 @@
 			path = RaromeTests;
 			sourceTree = "<group>";
 		};
-		D9C178AF2100773600588A79 /* RaromeUITests */ = {
+		D9C178AF2100773600588A79 /*    */ = {
 			isa = PBXGroup;
 			children = (
 				D9C178B02100773600588A79 /* RaromeUITests.swift */,
 				D9C178B22100773600588A79 /* Info.plist */,
 			);
+			name = "  ";
 			path = RaromeUITests;
 			sourceTree = "<group>";
 		};
@@ -132,9 +293,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9C178B52100773600588A79 /* Build configuration list for PBXNativeTarget "Rarome" */;
 			buildPhases = (
+				50E900EFA9BA7BDC7BBF21C9 /* [CP] Check Pods Manifest.lock */,
 				D9C178892100773200588A79 /* Sources */,
 				D9C1788A2100773200588A79 /* Frameworks */,
 				D9C1788B2100773200588A79 /* Resources */,
+				96B88D145AF3946F01565214 /* [CP] Copy Pods Resources */,
+				8F25746E9AE12CDB9727EC3D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,13 +415,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		50E900EFA9BA7BDC7BBF21C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rarome-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F25746E9AE12CDB9727EC3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Rarome/Pods-Rarome-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rarome/Pods-Rarome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96B88D145AF3946F01565214 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Rarome/Pods-Rarome-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rarome/Pods-Rarome-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D9C178892100773200588A79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D93B45512112C45700B4A137 /* StudentIInfomationViewController.swift in Sources */,
+				D93932AE210FF49D00183C5B /* StudentTableViewController.swift in Sources */,
+				D9700AD52114CABD004528BB /* ExtracurricularActivitiesAwardsTableViewCell.swift in Sources */,
+				D92F13C5210481FA00130F38 /* ComfirmPasscodeViewController.swift in Sources */,
+				D9A091F72107B68600CDD1CB /* AttendanceViewController.swift in Sources */,
+				D93932B02111A06700183C5B /* StudentDocumentsViewController.swift in Sources */,
+				D92D357F2114000A00E92EA8 /* LibraryInfomationTableViewCell.swift in Sources */,
+				D9700ACF211412F3004528BB /* DomitoryInformationTableCell.swift in Sources */,
+				D913234A2109F5B2001A2E88 /* Student_WiseViewController.swift in Sources */,
+				D9A091F021070F6A00CDD1CB /* AdminDashboardViewController.swift in Sources */,
+				D946B80121191B1D004F9092 /* EmployeeInformationViewController.swift in Sources */,
+				D92D357D2113F73300E92EA8 /* GradRoutineTableViewCell.swift in Sources */,
+				D947F9CF21133211003D9D6D /* GeneralInfomationTabelCell.swift in Sources */,
+				D913234C210BA43F001A2E88 /* GlobalConst.swift in Sources */,
+				D91323402108FB43001A2E88 /* UpdateProfileViewController.swift in Sources */,
+				D9700AD321149F0D004528BB /* DetailDocumentsTableViewCell.swift in Sources */,
+				D947F9D121137816003D9D6D /* ParentInfoTableCell.swift in Sources */,
+				D93932A8210D9AAB00183C5B /* StudentInfoViewController.swift in Sources */,
+				D92D3581211407D700E92EA8 /* TransportInformationTableCell.swift in Sources */,
+				D92F13C72104EF8000130F38 /* MainHomeViewController.swift in Sources */,
+				D9A040F32115A7BC007CB5E1 /* MedicalRecordTableViewCell.swift in Sources */,
+				D91323462109F57C001A2E88 /* Grade_WiseViewController.swift in Sources */,
+				D9A040F92117F965007CB5E1 /* DetailAttendaceRecordTableViewCell.swift in Sources */,
+				D9A091ED2106AD2500CDD1CB /* GoogleMapViewController.swift in Sources */,
 				D9C178932100773200588A79 /* ViewController.swift in Sources */,
+				D9700AD1211423EF004528BB /* DocumentsTabelViewCell.swift in Sources */,
+				D9A040F72116A71D007CB5E1 /* AttendanceRecordTableViewCell.swift in Sources */,
+				D91323442109BE2A001A2E88 /* ParentViewController.swift in Sources */,
+				D9A091F521078A3A00CDD1CB /* MessageBoxViewController.swift in Sources */,
+				D9700AD72114D3E6004528BB /* DetailExtracurricularTableViewCell.swift in Sources */,
+				D946B80321192F3B004F9092 /* DepartmentTableTableViewController.swift in Sources */,
+				D91323482109F599001A2E88 /* Term_WiseViewController.swift in Sources */,
 				D9C178912100773200588A79 /* AppDelegate.swift in Sources */,
+				D9A091F321078A1A00CDD1CB /* ProfileViewController.swift in Sources */,
+				D93932AA210ECCF400183C5B /* StudentInfoTableCell.swift in Sources */,
+				D9A040F5211610EA007CB5E1 /* DetailMedicalHistoryTableViewCell.swift in Sources */,
+				D9C178BF2101ED3E00588A79 /* HomeViewController.swift in Sources */,
+				D93B454F2111CF2900B4A137 /* StudenDocumentsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +628,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -422,12 +682,14 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		D9C178B62100773600588A79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97149B24D0609F54A8210204 /* Pods-Rarome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -438,13 +700,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Demo.Rarome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		D9C178B72100773600588A79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F23620A5959320C6295FAD /* Pods-Rarome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -455,7 +718,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Demo.Rarome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
