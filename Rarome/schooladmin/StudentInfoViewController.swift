@@ -15,8 +15,9 @@ import DropDown
 class StudentInfoViewController: UIViewController{
     
     @IBOutlet weak var view_top: UIView!
-    @IBOutlet weak var btn_selectClass: UIButton!
+    @IBOutlet weak var btn_selectClass: UIButton!    
     @IBOutlet weak var btn_selectSection: UIButton!
+    
     @IBOutlet weak var view_selectClass: UIView!
     @IBOutlet weak var view_selectSection: UIView!
 
@@ -54,8 +55,7 @@ class StudentInfoViewController: UIViewController{
         buildinUI()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {        
         var DestinationViewController = segue.destination as! StudentTableViewController
         DestinationViewController.studentsNames = self.filterStudentName
         DestinationViewController.fatherNames = self.filterFatherName

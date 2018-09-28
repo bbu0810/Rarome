@@ -9,15 +9,14 @@
 import UIKit
 
 class DailyAttendanceTableViewController: UITableViewController {
-
+    var names = [String]()
+    var img_urls = [String]()
+    var in_times = [String]()
+    var out_times = [String]()
+    var status = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,27 +24,84 @@ class DailyAttendanceTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return names.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "gotoDailyAttendanceTableViewCell", for: indexPath) as! DailyAttendanceTableViewCell
+        cell.lbl_name.text = names[indexPath.row]
+        let inTime = self.in_times[indexPath.row]
+        let in_time = "Time in: \(inTime)"
+        cell.lbl_in_time.text = in_time
+        let outTime = self.out_times[indexPath.row]
+        let out_time = "Time out: \(outTime)"
+        cell.lbl_out_time.text = out_time
+        if status[indexPath.row] == nil{
+            cell.lbl_statu.text = "Undefine"
+        }else{
+            cell.lbl_statu.text = self.status[indexPath.row]
+        }
+        
+        if self.img_urls[indexPath.row].count > 11 {
+            let photourl = GlobalConst.glb_studentImg_path + self.img_urls[indexPath.row]
+            let session = URLSession(configuration: .default)
+            let url = URL(string: photourl)!
+            let downloadPicTask = session.dataTask(with: url) { (data, response, error) in
+                if let e = error {
+                    DispatchQueue.main.async{
+                        cell.img_uerPhoto.image = UIImage(named: "ic_userPhoto")
+                    }
+                } else {
+                    if let res = response as? HTTPURLResponse {
+                        print("Downloaded cat picture with response code \(res.statusCode)")
+                        if let imageData = data {
+                            let image = UIImage(data: imageData)
+                            if ((image?.size) != nil){
+                                DispatchQueue.main.async{
+                                    if let updateCell = tableView.cellForRow(at: indexPath){
+                                        let cell = updateCell as! DailyAttendanceTableViewCell
+                                        cell.img_uerPhoto?.image = image
+                                        cell.img_uerPhoto.layer.borderWidth=1.0
+                                        cell.img_uerPhoto.layer.masksToBounds = false
+                                        cell.img_uerPhoto.layer.borderColor = UIColor.white.cgColor
+                                        cell.img_uerPhoto.layer.cornerRadius = cell.img_uerPhoto.frame.size.height/2
+                                        cell.img_uerPhoto.clipsToBounds = true
+                                        
+                                    } else {
+                                        DispatchQueue.main.async{
+                                            cell.img_uerPhoto.image = UIImage(named: "ic_userPhoto")
+                                        }
+                                    }
+                                }
+                            } else {
+                                DispatchQueue.main.async{
+                                    cell.img_uerPhoto.image = UIImage(named: "ic_userPhoto")
+                                }
+                            }
+                        } else {
+                            DispatchQueue.main.async{
+                                cell.img_uerPhoto.image = UIImage(named: "ic_userPhoto")
+                            }
+                        }
+                    } else {
+                        DispatchQueue.main.async{
+                            cell.img_uerPhoto.image = UIImage(named: "ic_userPhoto")
+                        }
+                    }
+                }
+            }
+            downloadPicTask.resume()
+        }
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

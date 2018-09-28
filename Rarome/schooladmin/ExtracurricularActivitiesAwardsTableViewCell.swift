@@ -22,8 +22,11 @@ class ExtracurricularActivitiesAwardsTableViewCell: UITableViewCell, UITableView
         var bool: Bool
         bool = (frame.size.height < ParentInfoTableCell.expendedHeight)
         if bool == false {
+            lbl_Extracurricular.isHidden = false
             lbl_Extracurricular.dataSource = self
             lbl_Extracurricular.reloadData()
+        } else {
+            lbl_Extracurricular.isHidden = true
         }
     }
     

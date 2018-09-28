@@ -10,6 +10,7 @@ import UIKit
 
 class AttendanceReportTableViewCell: UITableViewCell {
 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

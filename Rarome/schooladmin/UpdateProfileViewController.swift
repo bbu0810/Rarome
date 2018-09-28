@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UpdateProfileViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class UpdateProfileViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate{
     var sFirstName: String!
     var sLastName: String!
     var sEmail: String!
@@ -22,13 +22,18 @@ class UpdateProfileViewController: UIViewController, UINavigationControllerDeleg
     @IBOutlet weak var txt_first_name: UITextField!
     @IBOutlet weak var txt_last_name: UITextField!
     @IBOutlet weak var txt_email: UILabel!
-
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    
     var imagePickerController : UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         txt_first_name.text = sFirstName
+        txt_first_name.delegate = self
         txt_last_name.text = sLastName
+        txt_last_name.delegate = self
         txt_email.text = sEmail
         showImage()
         let singleTap = UITapGestureRecognizer(target: self, action: Selector("onClick_img"))
@@ -40,8 +45,21 @@ class UpdateProfileViewController: UIViewController, UINavigationControllerDeleg
         super.didReceiveMemoryWarning()
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return(true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        scrollView.setContentOffset(CGPoint(x:0, y:100), animated: true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+        scrollView.setContentOffset(CGPoint(x:0, y:0), animated: true)
     }
     
     @IBAction func onClick_update(_ sender: UIButton, forEvent event: UIEvent) {

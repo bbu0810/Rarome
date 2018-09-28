@@ -10,9 +10,8 @@ import Foundation
 import UIKit
 class AttendanceRecordTableViewCell: UITableViewCell, UITableViewDataSource{
     
-    
-    
     @IBOutlet weak var tbl_attendanceTableView: UITableView!
+    
     var sMonths: [String]!
     var sDays: [Int]!
     var sPercents: [Int]!
@@ -22,8 +21,11 @@ class AttendanceRecordTableViewCell: UITableViewCell, UITableViewDataSource{
         var bool: Bool
         bool = (frame.size.height < ParentInfoTableCell.expendedHeight)
         if bool == false {
+            tbl_attendanceTableView.isHidden = false
             tbl_attendanceTableView.dataSource = self
             tbl_attendanceTableView.reloadData()
+        } else {
+            tbl_attendanceTableView.isHidden = true
         }
     }
     

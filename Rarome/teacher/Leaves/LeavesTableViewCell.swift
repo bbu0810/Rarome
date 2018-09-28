@@ -24,7 +24,6 @@ class LeavesTableViewCell: UITableViewCell {
         view_main.layer.borderColor = UIColor(red: 93/255, green: 107/255, blue: 178/225, alpha: 1).cgColor
         view_main.layer.cornerRadius = 5
         view_main.layer.borderWidth = 1
-
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ApplyLeavesViewController.onClick_btnSubmit(_:forEvent:):ApplyLeavesViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ComfirmPasscodeViewController.onChang_txt4(_:):ComfirmPasscodeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sConfirmPassword">
+            </PersistentString>
+            <PersistentString
+               value = "preferencePassword">
+            </PersistentString>
+            <PersistentString
+               value = "sPassword">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ComfirmPasscodeViewController.textField(_:shouldChangeCharactersIn:replacementString:):ComfirmPasscodeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "textField.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ProgressReportViewController.getSubject():ProgressReportViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FingerPrintViewController.viewDidLoad():FingerPrintViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "StudentsOfClassSectionTableViewController.tableView(_:didSelectRowAt:):StudentsOfClassSectionTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailProgressHistoryViewController.getStudentProgressHistory():DetailProgressHistoryViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "subject_id">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DepartmentTableTableViewController.prepare(for:sender:):DepartmentTableTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sEmployeeNames[GlobalConst.glb_selectedID]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in EmployeeProfileUpdateViewController.submitProfile():EmployeeProfileUpdateViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DailyAttendanceTableViewCell.awakeFromNib():DailyAttendanceTableViewCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "HomeViewController.textFieldDidChange():HomeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "view_controller.attributedText">
+            </PersistentString>
+            <PersistentString
+               value = "view_controller.attributedText = attributedString">
+            </PersistentString>
+            <PersistentString
+               value = "view_controller">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "EmployeeProfileUpdateViewController.makeEmploymentHistory():EmployeeProfileUpdateViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in TeacherDashboardViewController.onClickLeaves(_:forEvent:):TeacherDashboardViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "leave[&quot;date_to&quot;] as! String">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TeacherAttendanceViewController.prepare(for:sender:):TeacherAttendanceViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "segue">
+            </PersistentString>
+            <PersistentString
+               value = "segue.identifier">
+            </PersistentString>
+            <PersistentString
+               value = "segue.indentifier">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ComfirmPasscodeViewController.textFieldDidChange():ComfirmPasscodeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "textField.text">
+            </PersistentString>
+            <PersistentString
+               value = "txtPasscode.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DailyAttendanceTableViewCell.setSelected(_:animated:):DailyAttendanceTableViewCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "EmployeeProfileUpdateViewController.getEmploymentHistory():EmployeeProfileUpdateViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.txt_company.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SubjectReportTableViewCell.buildUI():SubjectReportTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "txt_comments.text.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "EmployeeProfileUpdateViewController.submitProfile():EmployeeProfileUpdateViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "LeavesTableViewController.tableView(_:cellForRowAt:):LeavesTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DailyAttendanceTableViewController.tableView(_:cellForRowAt:):DailyAttendanceTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SubjectReportTableViewCell.onClick_detail(_:forEvent:):SubjectReportTableViewCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "LeavesTableViewController.onClickBtnAdd(_:):LeavesTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ApplyLeavesViewController.onClick_btnSubmit(_:forEvent:):ApplyLeavesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(response)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "EmployeeInformationViewController.prepare(for:sender:):EmployeeInformationViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DtailEmployeeProfileCollectionViewController.getDetailProfile():DtailEmployeeProfileCollectionViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "GlobalConst.glb_sEmployeeIDs">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.application(_:didFinishLaunchingWithOptions:):AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "permission.bool(forKey: &quot;bUsedFingerPrint&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

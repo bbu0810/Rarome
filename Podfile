@@ -8,6 +8,16 @@ target 'Rarome' do
     use_frameworks!
     pod 'GoogleMaps'
     pod 'DropDown'
-    pod 'XLPagerTabStrip', :git => 'https://github.com/KelvinJin/XLPagerTabStrip', :branch => 'swift3'
+    pod 'TextFieldEffects', '~> 1.4'
+    pod 'DatePickerDialog'
+    pod 'XLPagerTabStrip', '~> 8.0'
+    pod 'StarReview', '~> 1.0'
+    
+    pod 'Alamofire'
+    pod 'SwiftyJSON'
+    pod 'MBProgressHUD'
+    pod 'TPKeyboardAvoiding'
+    
+    pod 'UITextView+Placeholder', '~> 1.2'
+    pod 'UIActivityIndicator-for-SDWebImage', '~> 1.2'
 end
-

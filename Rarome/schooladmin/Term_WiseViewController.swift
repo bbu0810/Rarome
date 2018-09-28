@@ -21,6 +21,12 @@ class Term_WiseViewController: UIViewController, IndicatorInfoProvider {
     @IBOutlet weak var view_selectFeeType: UIView!
     @IBOutlet weak var view_selectTerm: UIView!
     
+    @IBOutlet weak var view_selectClassTop: UIView!
+    @IBOutlet weak var view_selectFeeTypeTop: UIView!
+    @IBOutlet weak var view_selectTermTop: UIView!
+    
+    let processDialog = MyProcessDialogViewController(message: "Loading...")
+    
     var classNames = [String]()
     var classID = [String]()
     var feeType = [String]()
@@ -56,7 +62,7 @@ class Term_WiseViewController: UIViewController, IndicatorInfoProvider {
             self.btn_selectFeeType.setTitle("Select Fee Type", for: .normal)
             self.getFeeType()
         }
-        dropDown.width = btn_selectClass.frame.width
+        dropDown.width = view_selectClass.frame.width
         dropDown.show()
         
         
@@ -68,16 +74,17 @@ class Term_WiseViewController: UIViewController, IndicatorInfoProvider {
         dropDown.dataSource = self.feeType
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.btn_selectFeeType.setTitle(item, for: UIControlState.normal)
+            self.btn_selectTerm.setTitle("Select Term", for: .normal)
             self.selectFeeType = index
             self.getTerms()
         }
-        dropDown.width = btn_selectFeeType.frame.width
+        dropDown.width = view_selectFeeType.frame.width
         dropDown.show()
     }
     
     @IBAction func onClick_selectTerm(_ sender: UIButton, forEvent event: UIEvent) {
         let dropDown = DropDown()
-        dropDown.anchorView = view_selectFeeType
+        dropDown.anchorView = view_selectTerm
         dropDown.dataSource = self.feeType
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.btn_selectTerm.setTitle(item, for: UIControlState.normal)
@@ -94,20 +101,22 @@ class Term_WiseViewController: UIViewController, IndicatorInfoProvider {
 
     
     func buildinUI(){
-        btn_selectClass.layer.borderWidth = 1
-        btn_selectClass.layer.cornerRadius = 5
-        btn_selectClass.layer.borderColor = UIColor(red: 93/255, green: 107/255, blue: 178/225, alpha: 1).cgColor
-        btn_selectFeeType.layer.borderWidth = 1
-        btn_selectFeeType.layer.cornerRadius = 5
-        btn_selectFeeType.layer.borderColor = UIColor(red: 93/255, green: 107/255, blue: 178/225, alpha: 1).cgColor
-        btn_selectTerm.layer.borderWidth = 1
-        btn_selectTerm.layer.cornerRadius = 5
-        btn_selectTerm.layer.borderColor = UIColor(red: 93/255, green: 107/255, blue: 178/225, alpha: 1).cgColor
+        view_selectClassTop.layer.borderWidth = 1
+        view_selectClassTop.layer.cornerRadius = 5
+        view_selectClassTop.layer.borderColor = UIColor(red: 93/255, green: 107/255, blue: 178/225, alpha: 1).cgColor
+        view_selectFeeTypeTop.layer.borderWidth = 1
+        view_selectFeeTypeTop.layer.cornerRadius = 5
+        view_selectFeeTypeTop.layer.borderColor = UIColor(red: 93/255, green: 107/255, blue: 178/225, alpha: 1).cgColor
+        view_selectTermTop.layer.borderWidth = 1
+        view_selectTermTop.layer.cornerRadius = 5
+        view_selectTermTop.layer.borderColor = UIColor(red: 93/255, green: 107/255, blue: 178/225, alpha: 1).cgColor
         view_top.layer.borderWidth = 1
+        view_top.layer.cornerRadius = 5
         view_top.layer.borderColor = UIColor(red: 93/255, green: 107/255, blue: 178/225, alpha: 1).cgColor
     }
     
     func getClass(){
+        present(processDialog, animated: true, completion: nil)
         let userid: String = GlobalConst.glb_sUserId
         let usertype: String = GlobalConst.glb_sUserType
         let schoolid: String = GlobalConst.glb_sSchoolID
@@ -146,8 +155,13 @@ class Term_WiseViewController: UIViewController, IndicatorInfoProvider {
                     }
                     
                 }
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             } catch let error as NSError {
-                print(error)
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             }
         }
         task.resume()
@@ -157,6 +171,7 @@ class Term_WiseViewController: UIViewController, IndicatorInfoProvider {
         if selectClass < 0 {
             return
         }
+        present(processDialog, animated: true, completion: nil)
         self.feeType.removeAll()
         let userid: String = GlobalConst.glb_sUserId
         let usertype: String = GlobalConst.glb_sUserType
@@ -192,8 +207,13 @@ class Term_WiseViewController: UIViewController, IndicatorInfoProvider {
                         }
                     }
                 }
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             } catch let error as NSError {
-                print(error)
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             }
         }
         task.resume()
@@ -206,6 +226,7 @@ class Term_WiseViewController: UIViewController, IndicatorInfoProvider {
         if selectFeeType < 0 {
             return
         }
+        present(processDialog, animated: true, completion: nil)
         let userid: String = GlobalConst.glb_sUserId
         let usertype: String = GlobalConst.glb_sUserType
         let schoolid: String = GlobalConst.glb_sSchoolID
@@ -220,11 +241,16 @@ class Term_WiseViewController: UIViewController, IndicatorInfoProvider {
         request.httpBody = postString.data(using: .utf8);
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
-                print("error=\(error)")
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
                 return
             }
             
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
                 print("response = \(response)")
             }
@@ -242,8 +268,13 @@ class Term_WiseViewController: UIViewController, IndicatorInfoProvider {
                         }
                     }
                 }
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             } catch let error as NSError {
-                print(error)
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             }
         }
         task.resume()

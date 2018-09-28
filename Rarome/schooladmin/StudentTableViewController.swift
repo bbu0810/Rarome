@@ -136,26 +136,4 @@ class StudentTableViewController: UITableViewController {
             return StudentInfoTableCell.defaultHeight
         }
     }
-    
-//    func refreshTableView(){
-//        let url:URL! = URL(string: "https://itunes.apple.com/search?term=flappy&entity=software")
-//        task = session.downloadTask(with: url, completionHandler: { (location: URL?, response: URLResponse?, error: Error?) -> Void in
-//
-//            if location != nil{
-//                let data:Data! = try? Data(contentsOf: location!)
-//                do{
-//                    let dic = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves) as AnyObject
-//                    self.tableData = dic.value(forKey : "results") as? [AnyObject]
-//                    DispatchQueue.main.async(execute: { () -> Void in
-//                        self.tableView.reloadData()
-//                        self.refreshControl?.endRefreshing()
-//                    })
-//                }catch{
-//                    print("something went wrong, try again")
-//                }
-//            }
-//        })
-//        task.resume()
-//    }
-
 }

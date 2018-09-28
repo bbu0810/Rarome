@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rarome/schooladmin/UpdateProfileViewController.swift"
-            timestampString = "554509993.510877"
+            filePath = "Rarome/schooladmin/employeeInfomation/EmployeeProfileUpdateViewController.swift"
+            timestampString = "558345712.115191"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "prepare(for:sender:)"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "textFieldShouldReturn(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,13 +73,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rarome/schooladmin/Term_WiseViewController.swift"
-            timestampString = "554931906.920256"
+            filePath = "Rarome/Login/FingerPrintViewController.swift"
+            timestampString = "558345712.115431"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
-            landmarkName = "getTerms()"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "authenticateUser()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,13 +89,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rarome/schooladmin/StudentInfoTableCell.swift"
-            timestampString = "554931906.92036"
+            filePath = "Rarome/Login/FingerPrintViewController.swift"
+            timestampString = "558345712.11549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "onClick_cridt(_:)"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "authenticateUser()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,13 +105,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rarome/schooladmin/StudentInfoTableCell.swift"
-            timestampString = "554931906.920405"
+            filePath = "Rarome/schooladmin/Fee/SchoolFeeTableViewCell.swift"
+            timestampString = "558579824.2571239"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "onClick_delete(_:forEvent:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,13 +121,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rarome/schooladmin/StudentInfoTableCell.swift"
-            timestampString = "554931906.9204431"
+            filePath = "Rarome/schooladmin/Fee/HostelFeeTableViewCell.swift"
+            timestampString = "558579824.2571861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "onClick_disable(_:forEvent:)"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -137,13 +137,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rarome/schooladmin/employeeInfomation/EmployeeInformationViewController.swift"
-            timestampString = "555300556.584752"
+            filePath = "Rarome/schooladmin/Fee/TransportFeeTableViewCell.swift"
+            timestampString = "558579824.257237"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "getSelectedDepartmentInfo()"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -153,13 +153,77 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rarome/schooladmin/employeeInfomation/EmployeeInformationViewController.swift"
-            timestampString = "555300617.261201"
+            filePath = "Rarome/schooladmin/Fee/MessFeeTableViewCell.swift"
+            timestampString = "558668693.2414041"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "getSelectedDepartmentInfo()"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rarome/schooladmin/Fee/SchoolFeeTableViewCell.swift"
+            timestampString = "558579824.257598"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rarome/schooladmin/Fee/HostelFeeTableViewCell.swift"
+            timestampString = "558579824.257671"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rarome/schooladmin/Fee/TransportFeeTableViewCell.swift"
+            timestampString = "558579824.257714"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rarome/teacher/Attendance/UpdateStudentsAttendanceViewController.swift"
+            timestampString = "558923145.079651"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "buttonClicked()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

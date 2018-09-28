@@ -19,6 +19,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyB579RRE-NN43Ya47oIF9CyfX7WVlehmDI")
+        let permission = UserDefaults.standard
+        //FingerPrint
+        if(permission.bool(forKey: "bUsedFingerPrint") == true){
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainVcIntial = storyboard.instantiateViewController(withIdentifier: "FingerPrintViewController") as UIViewController
+            let mainController = UINavigationController(rootViewController: mainVcIntial)
+            window?.rootViewController = mainController
+        } else {
+            //ConfirmPasscode
+            if (permission.string(forKey: "permission") != nil){
+                let storyboard = UIStoryboard(name: "Main" , bundle: nil)
+                let mainVcIntial = storyboard.instantiateViewController(withIdentifier: "ConfirmPasscode") as UIViewController
+                let mainController = UINavigationController(rootViewController: mainVcIntial)
+                window?.rootViewController = mainController
+            }
+        }
+
         return true
     }
 
@@ -45,9 +62,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ application: UIApplication) {
-        DropDown.startListeningToKeyboard()
+//        DropDown.startListeningToKeyboard()
+//        let permission = UserDefaults.standard
+//        if (permission.string(forKey: "permission") != nil){
+//            let storyboard = UIStoryboard(name: "stroyboard" , bundle: nil)
+//            let mainVcIntial = storyboard.instantiateViewController(withIdentifier: "gotoAdminDashboardViewController")
+//            let mainController = UINavigationController(rootViewController: mainVcIntial)
+//            window?.rootViewController = mainController
+//        }
     }
-
 
 }
 

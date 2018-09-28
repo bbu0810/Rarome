@@ -1,5 +1,5 @@
 //
-//  Grade_WiseViewController.swift
+//  traViewController.swift
 //  Rarome
 //
 //  Created by AntonDream on 7/26/18.
@@ -14,16 +14,21 @@ class Grade_WiseViewController: UIViewController, IndicatorInfoProvider, UITable
     
     @IBOutlet weak var view_top: UIView!
     @IBOutlet weak var layout_top: UIStackView!
+    
     @IBOutlet weak var btn_selectClass: UIButton!
     @IBOutlet weak var btn_selectFeeType: UIButton!
     @IBOutlet weak var view_selectClass: UIView!
     @IBOutlet weak var view_slect_fee_type: UIView!
+    @IBOutlet weak var view_selectFeeType: UIView!
     @IBOutlet weak var table_class_member: UITableView!
     @IBOutlet weak var lbl_classTotalPaid: UILabel!
     @IBOutlet weak var lbl_classTotalDue: UILabel!
     @IBOutlet weak var lbl_paidValue: UILabel!
     @IBOutlet weak var lbl_budValue: UILabel!
+    @IBOutlet weak var view_paid: UIView!
+    @IBOutlet weak var view_selectClassDrop: UIView!
     
+    let processDialog = MyProcessDialogViewController(message: "Loading...")
     
     var sUserId: String!
     var sUserType: String!
@@ -49,13 +54,13 @@ class Grade_WiseViewController: UIViewController, IndicatorInfoProvider, UITable
 
     @IBAction func onTest(_ sender: UIButton) {
         let dropDown = DropDown()
-        dropDown.anchorView = view_selectClass
+        dropDown.anchorView = view_selectClassDrop
         dropDown.dataSource = self.classNames
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.btn_selectClass.setTitle(item, for: .normal)
             self.selectClass = index
         }
-        dropDown.width = btn_selectClass.frame.width
+        dropDown.width = view_selectClassDrop.frame.width
         dropDown.show()
         self.getFeeType()
         self.btn_selectFeeType.setTitle("Select Fee Type", for: .normal)
@@ -70,7 +75,7 @@ class Grade_WiseViewController: UIViewController, IndicatorInfoProvider, UITable
             self.selectFeeType = index
             self.getClassWiseFeeDuo()
         }
-        dropDown.width = btn_selectFeeType.frame.width
+        dropDown.width = view_slect_fee_type.frame.width
         dropDown.show()
     }
     
@@ -95,6 +100,7 @@ class Grade_WiseViewController: UIViewController, IndicatorInfoProvider, UITable
     
     
     func getClass(){
+        present(processDialog, animated: true, completion: nil)
         let userid: String = sUserId
         let usertype: String = sUserType
         let schoolid: String = sSchoolID
@@ -131,16 +137,21 @@ class Grade_WiseViewController: UIViewController, IndicatorInfoProvider, UITable
                             self.classID.append(sClassID)
                         }
                     }
-
                 }
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             } catch let error as NSError {
-                print(error)
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             }
         }
         task.resume()
     }
     
     func getFeeType(){
+        present(processDialog, animated: true, completion: nil)
         self.feeType.removeAll()
         let userid: String = sUserId
         let usertype: String = sUserType
@@ -176,21 +187,27 @@ class Grade_WiseViewController: UIViewController, IndicatorInfoProvider, UITable
                         }
                     }
                 }
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             } catch let error as NSError {
-                print(error)
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             }
         }
         task.resume()
     }
     
     func buildinUI(){
-        btn_selectClass.layer.borderWidth = 1
-        btn_selectClass.layer.cornerRadius = 5
-        btn_selectClass.layer.borderColor = UIColor(red: 93/255, green: 107/255, blue: 178/225, alpha: 1).cgColor
-        btn_selectFeeType.layer.borderWidth = 1
-        btn_selectFeeType.layer.cornerRadius = 5
-        btn_selectFeeType.layer.borderColor = UIColor(red: 93/255, green: 107/255, blue: 178/225, alpha: 1).cgColor
+        view_selectClass.layer.borderWidth = 1
+        view_selectClass.layer.cornerRadius = 5
+        view_selectClass.layer.borderColor = UIColor(red: 93/255, green: 107/255, blue: 178/225, alpha: 1).cgColor
+        view_selectFeeType.layer.borderWidth = 1
+        view_selectFeeType.layer.cornerRadius = 5
+        view_selectFeeType.layer.borderColor = UIColor(red: 93/255, green: 107/255, blue: 178/225, alpha: 1).cgColor
         view_top.layer.borderWidth = 1
+        view_top.layer.cornerRadius = 5
         view_top.layer.borderColor = UIColor(red: 93/255, green: 107/255, blue: 178/225, alpha: 1).cgColor
     }
     
@@ -205,6 +222,7 @@ class Grade_WiseViewController: UIViewController, IndicatorInfoProvider, UITable
         if selectFeeType < 0 {
             return
         }
+        present(processDialog, animated: true, completion: nil)
         self.studentName.removeAll()
         let userid: String = sUserId
         let usertype: String = sUserType
@@ -220,13 +238,16 @@ class Grade_WiseViewController: UIViewController, IndicatorInfoProvider, UITable
         request.httpBody = postString.data(using: .utf8);
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
-                print("error=\(error)")
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
                 return
             }
             
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
-                print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(response)")
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             }
             
             let responseString = String(data: data, encoding: .utf8)
@@ -244,8 +265,13 @@ class Grade_WiseViewController: UIViewController, IndicatorInfoProvider, UITable
                     }
                 }
                 self.resultShow()
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             } catch let error as NSError {
-                print(error)
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             }
         }
         task.resume()
@@ -254,6 +280,9 @@ class Grade_WiseViewController: UIViewController, IndicatorInfoProvider, UITable
     func resultShow(){
         DispatchQueue.main.async(execute: {
             self.table_class_member.dataSource = self
+            self.view_paid.layer.borderWidth = 1
+            self.view_paid.layer.cornerRadius = 5
+            self.view_paid.layer.borderColor = UIColor(red: 93/255, green: 107/255, blue: 178/225, alpha: 1).cgColor
             self.table_class_member.reloadData()
             self.lbl_classTotalPaid.text = "Class Total Paid"
             self.lbl_classTotalDue.text = "Class Total Due"

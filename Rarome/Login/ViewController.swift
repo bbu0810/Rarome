@@ -8,7 +8,7 @@
 
 import UIKit
 import Foundation
-
+import TextFieldEffects
 extension Data {
     var hexString: String {
         let hexString = map { String(format: "%02.2hhx", $0) }.joined()
@@ -16,11 +16,14 @@ extension Data {
     }
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate{
 
-    @IBOutlet weak var mTxt_email: UITextField!
-    @IBOutlet weak var mTxt_password: UITextField!
+    @IBOutlet weak var mTxt_email: HoshiTextField!
+    @IBOutlet weak var mTxt_password: HoshiTextField!
     @IBOutlet weak var mBtn_login: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    let processDialog = MyProcessDialogViewController(message: "Loading...")
     
     var sUserId: String!
     var sUserType: String!
@@ -30,11 +33,16 @@ class ViewController: UIViewController {
     var sEmail: String!
     var sImagePath: String!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.mTxt_password.delegate = self
+        self.mTxt_email.delegate = self
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var DestinationViewController = segue.destination as! HomeViewController
@@ -45,9 +53,38 @@ class ViewController: UIViewController {
         DestinationViewController.sName = self.sName
         DestinationViewController.sEmail = mTxt_email.text
         DestinationViewController.sImagePath = self.sImagePath
+        
+        
+        let permissionState = UserDefaults.standard
+        permissionState.set(self.sUserId, forKey: "sUserId")
+        permissionState.set(self.sUserType, forKey: "sUserType")
+        permissionState.set(self.sSchoolID, forKey: "sSchoolID")
+        permissionState.set(self.sRunging_year, forKey: "sRunging_year")
+        permissionState.set(self.sName, forKey: "sName")
+        permissionState.set(mTxt_email.text, forKey: "sEmail")
+        permissionState.set(self.sImagePath, forKey: "sImagePath")
+        
     }
     
-    @IBAction func onClick_btn_login(_ sender: Any) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        scrollView.setContentOffset(CGPoint(x:0, y:50), animated: true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+        scrollView.setContentOffset(CGPoint(x:0, y:0), animated: true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return(true)
+    }
+    
+    @IBAction func onClick_btn_login(_ sender: UIButton, forEvent event: UIEvent) {
+        present(processDialog, animated: true, completion: nil)
         var sEmail: String = mTxt_email.text!
         var sPassword: String = mTxt_password.text!
         if sEmail.isEmpty == true{
@@ -65,16 +102,17 @@ class ViewController: UIViewController {
         let postString = "deviceToken=\(sDeviceToken)&device_id=\(iDeviceID)&deviceType=ios&email=\(sEmail)&password=\(sPassword)"
         request.httpBody = postString.data(using: .utf8);
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                print("error=\(error)")
+            guard let data = data, error == nil else {
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
                 return
             }
-            
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
-                print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(response)")
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             }
-            
             let responseString = String(data: data, encoding: .utf8)
             do{
                 let parseData = try JSONSerialization.jsonObject(with: data) as! [String:Any]
@@ -90,23 +128,24 @@ class ViewController: UIViewController {
                 }
                 self.gotoHome(iStatus: iStatus, sMessage: sMessage);
             } catch let error as NSError {
-                print(error)
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             }
         }
         task.resume()
     }
-
+    
     func gotoHome(iStatus:Int, sMessage:String) {
         if iStatus == 0 {
             DispatchQueue.main.async(execute: {
+                self.processDialog.dismiss(animated: true, completion: nil)
                 var alert = UIAlertController(title: "Error", message: sMessage, preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                     switch action.style{
                     case .default:
-                        print("default")
                         return
                     case .cancel:
-                        print("cancel")
                         return
                     case .destructive:
                         print("destructive")
@@ -117,6 +156,7 @@ class ViewController: UIViewController {
         }
         if    sMessage == "success"{
             DispatchQueue.main.async(execute: {
+                self.processDialog.dismiss(animated: true, completion: nil)
                 self.performSegue(withIdentifier: "gotoHomeSegue", sender: self)
                 GlobalConst.glb_sUserId = self.sUserId
                 GlobalConst.glb_sSchoolID = self.sSchoolID

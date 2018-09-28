@@ -344,26 +344,47 @@ class StudentIInfomationViewController: UITableViewController {
                     self.sMotherPhone = result["mother_mobile"] as? String
                     self.sMotherEmail = result["mother_email"] as? String
                     
-                    let transportInfor = parseData["transport_info"] as! [String:AnyObject]
-                    self.sBusName = transportInfor["bus_name"] as! String
-                    self.sBusNumber = transportInfor["bus_unique_key"] as! String
-                    let routeFrom = transportInfor["route_from"] as? String
-                    let routeTo = transportInfor["route_to"] as? String
-                    self.sMotherName = "\(routeFrom ?? "") To \(routeTo ?? "")"
-                    self.sRouteName = transportInfor["bus_name"] as! String
-                    self.sDriverName = transportInfor["bus_driver_name"] as! String
-                    self.sDriverPhoneNumber = transportInfor["phone"] as! String
-                    
-                    let domitoryInfo = parseData["dormitory_info"] as! [String:AnyObject]
-                    self.sHostelName = domitoryInfo["hostel_name"] as! String
-                    self.sType = domitoryInfo["hostel_type"] as! String
-                    self.sFloorName = domitoryInfo["floor_name"] as! String
-                    self.sRoomNo = domitoryInfo["room_no"] as! String
-                    self.sFood = domitoryInfo["food"] as! String
-                    self.sRegidterationDate = domitoryInfo["register_date"] as! String
-                    self.sVacatingDate = domitoryInfo["vacating_date"] as! String
-                    self.sTransferDate = domitoryInfo["transfer_date"] as? String
-                    self.sDomitoryInfoStatus = domitoryInfo["status"] as! String
+                    let transportInfor = parseData["transport_info"] as? [String:AnyObject]
+                    if transportInfor != nil {
+                        self.sBusName = transportInfor!["bus_name"] as! String
+                        self.sBusNumber = transportInfor!["bus_unique_key"] as! String
+                        let routeFrom = transportInfor!["route_from"] as? String
+                        let routeTo = transportInfor!["route_to"] as? String
+                        self.sMotherName = "\(routeFrom ?? "") To \(routeTo ?? "")"
+                        self.sRouteName = transportInfor!["bus_name"] as! String
+                        self.sDriverName = transportInfor!["bus_driver_name"] as! String
+                        self.sDriverPhoneNumber = transportInfor!["phone"] as! String
+                    } else {
+                        self.sBusName = ""
+                        self.sBusNumber = ""
+                        self.sMotherName = ""
+                        self.sRouteName = ""
+                        self.sDriverName = ""
+                        self.sDriverPhoneNumber = ""
+                    }
+                    let domitoryInfo = parseData["dormitory_info"] as? [String:AnyObject]
+                    if(domitoryInfo != nil){
+                        self.sHostelName = domitoryInfo!["hostel_name"] as! String
+                        self.sType = domitoryInfo!["hostel_type"] as! String
+                        self.sFloorName = domitoryInfo!["floor_name"] as! String
+                        self.sRoomNo = domitoryInfo!["room_no"] as! String
+                        self.sFood = domitoryInfo!["food"] as! String
+                        self.sRegidterationDate = domitoryInfo!["register_date"] as! String
+                        self.sVacatingDate = domitoryInfo!["vacating_date"] as! String
+                        self.sTransferDate = domitoryInfo!["transfer_date"] as? String
+                        self.sDomitoryInfoStatus = domitoryInfo!["status"] as! String
+                    } else {
+                        self.sHostelName = ""
+                        self.sType = ""
+                        self.sFloorName = ""
+                        self.sRoomNo = ""
+                        self.sFood = ""
+                        self.sRegidterationDate = ""
+                        self.sVacatingDate = ""
+                        self.sTransferDate = ""
+                        self.sDomitoryInfoStatus = ""
+                    }
+
                     
                     let documentsInfo = parseData["documents"] as! [[String:AnyObject]]
                     for documentInfo in documentsInfo {
@@ -387,11 +408,19 @@ class StudentIInfomationViewController: UITableViewController {
                     let immunizationRecords = medicalRecordInfo["imunization_record"] as! [String:AnyObject]
                     self.sImmunizationFile = immunizationRecords["immunization_file"] as? String
                     self.sImmunizationFileNames = immunizationRecords["immunization_file_name"] as? String
-                    let medicalProblem = medicalRecordInfo["medical_problem"] as! [String:AnyObject]
-                    self.dMedicalProblem = medicalRecordInfo["desease_title"] as? String
-                    self.sDescription = medicalRecordInfo["description"] as? String
-                    self.sConsultingType = medicalRecordInfo["consulting_type"] as? String
-                    self.sDiagnosis = medicalRecordInfo["diagnosis"] as? String
+                    let medicalProblem = medicalRecordInfo["medical_problem"] as? [String:AnyObject]
+                    if medicalProblem != nil{
+                        self.dMedicalProblem = medicalRecordInfo["desease_title"] as? String
+                        self.sDescription = medicalRecordInfo["description"] as? String
+                        self.sConsultingType = medicalRecordInfo["consulting_type"] as? String
+                        self.sDiagnosis = medicalRecordInfo["diagnosis"] as? String
+                    } else {
+                        self.dMedicalProblem = ""
+                        self.sDescription = ""
+                        self.sConsultingType = ""
+                        self.sDiagnosis = ""
+                    }
+
                     let medicalHistories = medicalRecordInfo["student_medical_history"] as! [[String:AnyObject]]
                     for medicalHistory in medicalHistories {
                         let disease = medicalHistory["desease_title"] as? String

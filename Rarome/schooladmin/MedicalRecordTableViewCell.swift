@@ -19,6 +19,15 @@ class MedicalRecordTableViewCell: UITableViewCell, UITableViewDataSource {
     
     @IBOutlet weak var tbl_medicalHistory: UITableView!
     
+    @IBOutlet weak var lbl_reportForImmunization: UILabel!
+    @IBOutlet weak var layout_immunizatoinReport: UIStackView!
+    @IBOutlet weak var layout_medicalProblem: UIStackView!
+    @IBOutlet weak var lbl_medicalProblemDisease: UITextView!
+    @IBOutlet weak var lbl_DescriptionTextg: UILabel!
+    @IBOutlet weak var lbl_ConsultingTypeText: UILabel!
+    @IBOutlet weak var lbl_DiagnosisText: UILabel!
+    @IBOutlet weak var lbl_medicalHistoryText: UIStackView!
+    
     var sImmunizationURL: String!
     
     var sMedicalProblem: String!
@@ -38,8 +47,40 @@ class MedicalRecordTableViewCell: UITableViewCell, UITableViewDataSource {
         var bool: Bool
         bool = (frame.size.height < ParentInfoTableCell.expendedHeight)
         if bool == false {
+            lbl_reportForImmunization.isHidden = false
+            layout_immunizatoinReport.isHidden = false
+            layout_medicalProblem.isHidden = false
+            lbl_medicalProblemDisease.isHidden = false
+            lbl_DescriptionTextg.isHidden = false
+            lbl_ConsultingTypeText.isHidden = false
+            lbl_DiagnosisText.isHidden = false
+            lbl_medicalHistoryText.isHidden = false
+            lbl_immunizationRecordTitle.isHidden = false
+            btn_immunizationReport.isHidden = false
+            lbl_medicalProblem.isHidden = false
+            lbl_description.isHidden = false
+            lbl_consultingType.isHidden = false
+            lbl_diagnosis.isHidden = false
+            tbl_medicalHistory.isHidden = false
+            
             tbl_medicalHistory.dataSource = self
             tbl_medicalHistory.reloadData()
+        } else{
+            lbl_reportForImmunization.isHidden = true
+            layout_immunizatoinReport.isHidden = true
+            layout_medicalProblem.isHidden = true
+            lbl_medicalProblemDisease.isHidden = true
+            lbl_DescriptionTextg.isHidden = true
+            lbl_ConsultingTypeText.isHidden = true
+            lbl_DiagnosisText.isHidden = true
+            lbl_medicalHistoryText.isHidden = true
+            lbl_immunizationRecordTitle.isHidden = true
+            btn_immunizationReport.isHidden = true
+            lbl_medicalProblem.isHidden = true
+            lbl_description.isHidden = true
+            lbl_consultingType.isHidden = true
+            lbl_diagnosis.isHidden = true
+            tbl_medicalHistory.isHidden = true
         }
     }
     

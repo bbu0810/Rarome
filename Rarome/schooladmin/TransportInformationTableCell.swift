@@ -16,6 +16,9 @@ class TransportInformationTableCell: UITableViewCell{
     @IBOutlet weak var lbl_drigerNumber: UILabel!
     @IBOutlet weak var lbl_driverPhoneNumber: UILabel!
     
+    @IBOutlet weak var label_driverPhoneNumber: UILabel!
+    
+    
     class var expendedHeight: CGFloat{ get{return 225}}
     class var defaultHeight: CGFloat{ get{return 50}}
     

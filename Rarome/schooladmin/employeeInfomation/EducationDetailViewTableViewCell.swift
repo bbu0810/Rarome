@@ -10,6 +10,13 @@ import UIKit
 
 class EducationDetailViewTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lbl_course: UILabel!
+    @IBOutlet weak var lbl_institution: UILabel!
+    @IBOutlet weak var lbl_percentage: UILabel!
+    @IBOutlet weak var lbl_courseFrom: UILabel!
+    @IBOutlet weak var lbl_courseTo: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

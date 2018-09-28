@@ -1,7 +1,7 @@
 //  BaseButtonBarPagerTabStripViewController.swift
 //  XLPagerTabStrip ( https://github.com/xmartlabs/XLPagerTabStrip )
 //
-//  Copyright (c) 2016 Xmartlabs ( http://xmartlabs.com )
+//  Copyright (c) 2017 Xmartlabs ( http://xmartlabs.com )
 //
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,31 +24,16 @@
 
 import Foundation
 
-open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType : UICollectionViewCell>: PagerTabStripViewController, PagerTabStripDataSource, PagerTabStripIsProgressiveDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType: UICollectionViewCell>: PagerTabStripViewController, PagerTabStripDataSource, PagerTabStripIsProgressiveDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    open var settings = ButtonBarPagerTabStripSettings()
-    open var buttonBarItemSpec: ButtonBarItemSpec<ButtonBarCellType>!
-    open var changeCurrentIndex: ((_ oldCell: ButtonBarCellType?, _ newCell: ButtonBarCellType?, _ animated: Bool) -> Void)?
-    open var changeCurrentIndexProgressive: ((_ oldCell: ButtonBarCellType?, _ newCell: ButtonBarCellType?, _ progressPercentage: CGFloat, _ changeCurrentIndex: Bool, _ animated: Bool) -> Void)?
+    public var settings = ButtonBarPagerTabStripSettings()
+    public var buttonBarItemSpec: ButtonBarItemSpec<ButtonBarCellType>!
+    public var changeCurrentIndex: ((_ oldCell: ButtonBarCellType?, _ newCell: ButtonBarCellType?, _ animated: Bool) -> Void)?
+    public var changeCurrentIndexProgressive: ((_ oldCell: ButtonBarCellType?, _ newCell: ButtonBarCellType?, _ progressPercentage: CGFloat, _ changeCurrentIndex: Bool, _ animated: Bool) -> Void)?
 
+    @IBOutlet public weak var buttonBarView: ButtonBarView!
 
-    @IBOutlet open lazy var buttonBarView: ButtonBarView! = { [unowned self] in
-        var flowLayout = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection = .horizontal
-        flowLayout.sectionInset = UIEdgeInsetsMake(0, self.settings.style.buttonBarLeftContentInset ?? 35, 0, self.settings.style.buttonBarRightContentInset ?? 35)
-        let buttonBarHeight = self.settings.style.buttonBarHeight ?? 44
-        let buttonBar = ButtonBarView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: buttonBarHeight), collectionViewLayout: flowLayout)
-        buttonBar.backgroundColor = .orange
-        buttonBar.selectedBar.backgroundColor = .black
-        buttonBar.autoresizingMask = .flexibleWidth
-        var newContainerViewFrame = self.containerView.frame
-        newContainerViewFrame.origin.y = buttonBarHeight
-        newContainerViewFrame.size.height = self.containerView.frame.size.height - (buttonBarHeight - self.containerView.frame.origin.y)
-        self.containerView.frame = newContainerViewFrame
-        return buttonBar
-        }()
-
-    lazy fileprivate var cachedCellWidths: [CGFloat]? = { [unowned self] in
+    lazy private var cachedCellWidths: [CGFloat]? = { [unowned self] in
         return self.calculateWidths()
         }()
 
@@ -66,6 +51,22 @@ open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType : UICollec
 
     open override func viewDidLoad() {
         super.viewDidLoad()
+        let buttonBarViewAux = buttonBarView ?? {
+            let flowLayout = UICollectionViewFlowLayout()
+            flowLayout.scrollDirection = .horizontal
+            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: settings.style.buttonBarLeftContentInset ?? 35, bottom: 0, right: settings.style.buttonBarRightContentInset ?? 35)
+            let buttonBarHeight = settings.style.buttonBarHeight ?? 44
+            let buttonBar = ButtonBarView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: buttonBarHeight), collectionViewLayout: flowLayout)
+            buttonBar.backgroundColor = .orange
+            buttonBar.selectedBar.backgroundColor = .black
+            buttonBar.autoresizingMask = .flexibleWidth
+            var newContainerViewFrame = containerView.frame
+            newContainerViewFrame.origin.y = buttonBarHeight
+            newContainerViewFrame.size.height = containerView.frame.size.height - (buttonBarHeight - containerView.frame.origin.y)
+            containerView.frame = newContainerViewFrame
+            return buttonBar
+        }()
+        buttonBarView = buttonBarViewAux
 
         if buttonBarView.superview == nil {
             view.addSubview(buttonBarView)
@@ -77,12 +78,12 @@ open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType : UICollec
             buttonBarView.dataSource = self
         }
         buttonBarView.scrollsToTop = false
-        let flowLayout = buttonBarView.collectionViewLayout as! UICollectionViewFlowLayout
+        let flowLayout = buttonBarView.collectionViewLayout as! UICollectionViewFlowLayout // swiftlint:disable:this force_cast
         flowLayout.scrollDirection = .horizontal
-        flowLayout.minimumInteritemSpacing = settings.style.buttonBarMinimumLineSpacing ?? flowLayout.minimumLineSpacing
+        flowLayout.minimumInteritemSpacing = settings.style.buttonBarMinimumInteritemSpacing ?? flowLayout.minimumInteritemSpacing
         flowLayout.minimumLineSpacing = settings.style.buttonBarMinimumLineSpacing ?? flowLayout.minimumLineSpacing
         let sectionInset = flowLayout.sectionInset
-        flowLayout.sectionInset = UIEdgeInsetsMake(sectionInset.top, self.settings.style.buttonBarLeftContentInset ?? sectionInset.left, sectionInset.bottom, self.settings.style.buttonBarRightContentInset ?? sectionInset.right)
+        flowLayout.sectionInset = UIEdgeInsets(top: sectionInset.top, left: settings.style.buttonBarLeftContentInset ?? sectionInset.left, bottom: sectionInset.bottom, right: settings.style.buttonBarRightContentInset ?? sectionInset.right)
         buttonBarView.showsHorizontalScrollIndicator = false
         buttonBarView.backgroundColor = settings.style.buttonBarBackgroundColor ?? buttonBarView.backgroundColor
         buttonBarView.selectedBar.backgroundColor = settings.style.selectedBarBackgroundColor
@@ -129,7 +130,8 @@ open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType : UICollec
         // When the view first appears or is rotated we also need to ensure that the barButtonView's
         // selectedBar is resized and its contentOffset/scroll is set correctly (the selected
         // tab/cell may end up either skewed or off screen after a rotation otherwise)
-        buttonBarView.moveToIndex(currentIndex, animated: false, swipeDirection: .none, pagerScroll: .scrollOnlyIfOutOfScreen)
+        buttonBarView.moveTo(index: currentIndex, animated: false, swipeDirection: .none, pagerScroll: .scrollOnlyIfOutOfScreen)
+        buttonBarView.selectItem(at: IndexPath(item: currentIndex, section: 0), animated: false, scrollPosition: [])
     }
 
     // MARK: - View Rotation
@@ -145,23 +147,21 @@ open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType : UICollec
         guard isViewLoaded else { return }
         buttonBarView.reloadData()
         cachedCellWidths = calculateWidths()
-        buttonBarView.moveToIndex(currentIndex, animated: false, swipeDirection: .none, pagerScroll: .yes)
+        buttonBarView.moveTo(index: currentIndex, animated: false, swipeDirection: .none, pagerScroll: .yes)
     }
 
     open func calculateStretchedCellWidths(_ minimumCellWidths: [CGFloat], suggestedStretchedCellWidth: CGFloat, previousNumberOfLargeCells: Int) -> CGFloat {
         var numberOfLargeCells = 0
         var totalWidthOfLargeCells: CGFloat = 0
 
-        for minimumCellWidthValue in minimumCellWidths {
-            if minimumCellWidthValue > suggestedStretchedCellWidth {
-                totalWidthOfLargeCells += minimumCellWidthValue
-                numberOfLargeCells += 1
-            }
+        for minimumCellWidthValue in minimumCellWidths where minimumCellWidthValue > suggestedStretchedCellWidth {
+            totalWidthOfLargeCells += minimumCellWidthValue
+            numberOfLargeCells += 1
         }
 
         guard numberOfLargeCells > previousNumberOfLargeCells else { return suggestedStretchedCellWidth }
 
-        let flowLayout = buttonBarView.collectionViewLayout as! UICollectionViewFlowLayout
+        let flowLayout = buttonBarView.collectionViewLayout as! UICollectionViewFlowLayout // swiftlint:disable:this force_cast
         let collectionViewAvailiableWidth = buttonBarView.frame.size.width - flowLayout.sectionInset.left - flowLayout.sectionInset.right
         let numberOfCells = minimumCellWidths.count
         let cellSpacingTotal = CGFloat(numberOfCells - 1) * flowLayout.minimumLineSpacing
@@ -172,9 +172,9 @@ open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType : UICollec
         return calculateStretchedCellWidths(minimumCellWidths, suggestedStretchedCellWidth: newSuggestedStretchedCellWidth, previousNumberOfLargeCells: numberOfLargeCells)
     }
 
-    open func pagerTabStripViewController(_ pagerTabStripViewController: PagerTabStripViewController, updateIndicatorFromIndex fromIndex: Int, toIndex: Int) {
+    open func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int) {
         guard shouldUpdateButtonBarView else { return }
-        buttonBarView.moveToIndex(toIndex, animated: true, swipeDirection: toIndex < fromIndex ? .right : .left, pagerScroll: .yes)
+        buttonBarView.moveTo(index: toIndex, animated: true, swipeDirection: toIndex < fromIndex ? .right : .left, pagerScroll: .yes)
 
         if let changeCurrentIndex = changeCurrentIndex {
             let oldCell = buttonBarView.cellForItem(at: IndexPath(item: currentIndex != fromIndex ? fromIndex : toIndex, section: 0)) as? ButtonBarCellType
@@ -183,9 +183,9 @@ open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType : UICollec
         }
     }
 
-    open func pagerTabStripViewController(_ pagerTabStripViewController: PagerTabStripViewController, updateIndicatorFromIndex fromIndex: Int, toIndex: Int, withProgressPercentage progressPercentage: CGFloat, indexWasChanged: Bool) {
+    open func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int, withProgressPercentage progressPercentage: CGFloat, indexWasChanged: Bool) {
         guard shouldUpdateButtonBarView else { return }
-        buttonBarView.moveFromIndex(fromIndex, toIndex: toIndex, progressPercentage: progressPercentage, pagerScroll: .yes)
+        buttonBarView.move(fromIndex: fromIndex, toIndex: toIndex, progressPercentage: progressPercentage, pagerScroll: .yes)
         if let changeCurrentIndexProgressive = changeCurrentIndexProgressive {
             let oldCell = buttonBarView.cellForItem(at: IndexPath(item: currentIndex != fromIndex ? fromIndex : toIndex, section: 0)) as? ButtonBarCellType
             let newCell = buttonBarView.cellForItem(at: IndexPath(item: currentIndex, section: 0)) as? ButtonBarCellType
@@ -195,32 +195,31 @@ open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType : UICollec
 
     // MARK: - UICollectionViewDelegateFlowLayut
 
-    open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
-        guard let cellWidthValue = cachedCellWidths?[(indexPath as NSIndexPath).row] else {
-            fatalError("cachedCellWidths for \((indexPath as NSIndexPath).row) must not be nil")
+    @objc open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
+        guard let cellWidthValue = cachedCellWidths?[indexPath.row] else {
+            fatalError("cachedCellWidths for \(indexPath.row) must not be nil")
         }
         return CGSize(width: cellWidthValue, height: collectionView.frame.size.height)
     }
 
     open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard (indexPath as NSIndexPath).item != currentIndex else { return }
+        guard indexPath.item != currentIndex else { return }
 
-        buttonBarView.moveToIndex((indexPath as NSIndexPath).item, animated: true, swipeDirection: .none, pagerScroll: .yes)
+        buttonBarView.moveTo(index: indexPath.item, animated: true, swipeDirection: .none, pagerScroll: .yes)
         shouldUpdateButtonBarView = false
 
         let oldCell = buttonBarView.cellForItem(at: IndexPath(item: currentIndex, section: 0)) as? ButtonBarCellType
-        let newCell = buttonBarView.cellForItem(at: IndexPath(item: (indexPath as NSIndexPath).item, section: 0)) as? ButtonBarCellType
+        let newCell = buttonBarView.cellForItem(at: IndexPath(item: indexPath.item, section: 0)) as? ButtonBarCellType
         if pagerBehaviour.isProgressiveIndicator {
             if let changeCurrentIndexProgressive = changeCurrentIndexProgressive {
                 changeCurrentIndexProgressive(oldCell, newCell, 1, true, true)
             }
-        }
-        else {
+        } else {
             if let changeCurrentIndex = changeCurrentIndex {
                 changeCurrentIndex(oldCell, newCell, true)
             }
         }
-        moveToViewControllerAtIndex((indexPath as NSIndexPath).item)
+        moveToViewController(at: indexPath.item)
     }
 
     // MARK: - UICollectionViewDataSource
@@ -233,19 +232,18 @@ open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType : UICollec
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? ButtonBarCellType else {
             fatalError("UICollectionViewCell should be or extend from ButtonBarViewCell")
         }
-        let childController = viewControllers[(indexPath as NSIndexPath).item] as! IndicatorInfoProvider
+        let childController = viewControllers[indexPath.item] as! IndicatorInfoProvider // swiftlint:disable:this force_cast
         let indicatorInfo = childController.indicatorInfo(for: self)
 
-        configureCell(cell, indicatorInfo: indicatorInfo)
+        configure(cell: cell, for: indicatorInfo)
 
         if pagerBehaviour.isProgressiveIndicator {
             if let changeCurrentIndexProgressive = changeCurrentIndexProgressive {
-                changeCurrentIndexProgressive(currentIndex == (indexPath as NSIndexPath).item ? nil : cell, currentIndex == (indexPath as NSIndexPath).item ? cell : nil, 1, true, false)
+                changeCurrentIndexProgressive(currentIndex == indexPath.item ? nil : cell, currentIndex == indexPath.item ? cell : nil, 1, true, false)
             }
-        }
-        else {
+        } else {
             if let changeCurrentIndex = changeCurrentIndex {
-                changeCurrentIndex(currentIndex == (indexPath as NSIndexPath).item ? nil : cell, currentIndex == (indexPath as NSIndexPath).item ? cell : nil, false)
+                changeCurrentIndex(currentIndex == indexPath.item ? nil : cell, currentIndex == indexPath.item ? cell : nil, false)
             }
         }
 
@@ -261,19 +259,19 @@ open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType : UICollec
         shouldUpdateButtonBarView = true
     }
 
-    open func configureCell(_ cell: ButtonBarCellType, indicatorInfo: IndicatorInfo){
+    open func configure(cell: ButtonBarCellType, for indicatorInfo: IndicatorInfo) {
         fatalError("You must override this method to set up ButtonBarView cell accordingly")
     }
 
-    fileprivate func calculateWidths() -> [CGFloat] {
-        let flowLayout = self.buttonBarView.collectionViewLayout as! UICollectionViewFlowLayout
-        let numberOfCells = self.viewControllers.count
+    private func calculateWidths() -> [CGFloat] {
+        let flowLayout = buttonBarView.collectionViewLayout as! UICollectionViewFlowLayout // swiftlint:disable:this force_cast
+        let numberOfCells = viewControllers.count
 
         var minimumCellWidths = [CGFloat]()
         var collectionViewContentWidth: CGFloat = 0
 
-        for viewController in self.viewControllers {
-            let childController = viewController as! IndicatorInfoProvider
+        for viewController in viewControllers {
+            let childController = viewController as! IndicatorInfoProvider // swiftlint:disable:this force_cast
             let indicatorInfo = childController.indicatorInfo(for: self)
             switch buttonBarItemSpec! {
             case .cellClass(let widthCallback):
@@ -290,14 +288,13 @@ open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType : UICollec
         let cellSpacingTotal = CGFloat(numberOfCells - 1) * flowLayout.minimumLineSpacing
         collectionViewContentWidth += cellSpacingTotal
 
-        let collectionViewAvailableVisibleWidth = self.buttonBarView.frame.size.width - flowLayout.sectionInset.left - flowLayout.sectionInset.right
+        let collectionViewAvailableVisibleWidth = buttonBarView.frame.size.width - flowLayout.sectionInset.left - flowLayout.sectionInset.right
 
-        if !settings.style.buttonBarItemsShouldFillAvailiableWidth || collectionViewAvailableVisibleWidth < collectionViewContentWidth {
+        if !settings.style.buttonBarItemsShouldFillAvailableWidth || collectionViewAvailableVisibleWidth < collectionViewContentWidth {
             return minimumCellWidths
-        }
-        else {
+        } else {
             let stretchedCellWidthIfAllEqual = (collectionViewAvailableVisibleWidth - cellSpacingTotal) / CGFloat(numberOfCells)
-            let generalMinimumCellWidth = self.calculateStretchedCellWidths(minimumCellWidths, suggestedStretchedCellWidth: stretchedCellWidthIfAllEqual, previousNumberOfLargeCells: 0)
+            let generalMinimumCellWidth = calculateStretchedCellWidths(minimumCellWidths, suggestedStretchedCellWidth: stretchedCellWidthIfAllEqual, previousNumberOfLargeCells: 0)
             var stretchedCellWidths = [CGFloat]()
 
             for minimumCellWidthValue in minimumCellWidths {
@@ -309,9 +306,8 @@ open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType : UICollec
         }
     }
 
-    fileprivate var shouldUpdateButtonBarView = true
+    private var shouldUpdateButtonBarView = true
 }
-
 
 open class ExampleBaseButtonBarPagerTabStripViewController: BaseButtonBarPagerTabStripViewController<ButtonBarViewCell> {
 
@@ -325,8 +321,15 @@ open class ExampleBaseButtonBarPagerTabStripViewController: BaseButtonBarPagerTa
         initialize()
     }
 
-    open func initialize(){
-        buttonBarItemSpec = .nibFile(nibName: "ButtonCell", bundle: Bundle(for: ButtonBarViewCell.self), width:{ [weak self] (childItemInfo) -> CGFloat in
+    open func initialize() {
+        var bundle = Bundle(for: ButtonBarViewCell.self)
+        if let resourcePath = bundle.path(forResource: "XLPagerTabStrip", ofType: "bundle") {
+            if let resourcesBundle = Bundle(path: resourcePath) {
+                bundle = resourcesBundle
+            }
+        }
+        
+        buttonBarItemSpec = .nibFile(nibName: "ButtonCell", bundle: bundle, width: { [weak self] (childItemInfo) -> CGFloat in
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
             label.font = self?.settings.style.buttonBarItemFont ?? label.font
@@ -336,8 +339,9 @@ open class ExampleBaseButtonBarPagerTabStripViewController: BaseButtonBarPagerTa
             })
     }
 
-    open override func configureCell(_ cell: ButtonBarViewCell, indicatorInfo: IndicatorInfo){
+    open override func configure(cell: ButtonBarViewCell, for indicatorInfo: IndicatorInfo) {
         cell.label.text = indicatorInfo.title
+        cell.accessibilityLabel = indicatorInfo.accessibilityLabel
         if let image = indicatorInfo.image {
             cell.imageView.image = image
         }
