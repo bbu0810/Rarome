@@ -218,12 +218,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rarome/teacher/Attendance/UpdateStudentsAttendanceViewController.swift"
-            timestampString = "558923145.079651"
+            timestampString = "560233321.1428469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "buttonClicked()"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "didTapButton(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

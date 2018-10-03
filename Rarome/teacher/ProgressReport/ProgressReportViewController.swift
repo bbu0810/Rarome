@@ -118,7 +118,6 @@ class ProgressReportViewController: UIViewController {
         let running_year = GlobalConst.glb_sRunning_year!
         let user_type = GlobalConst.glb_sUserType!
         let user_id = GlobalConst.glb_sUserId!
-        
         present(processDialog, animated: true, completion: nil)
         let url = URL(string: "https://demo.rarome.com/index.php/?api/get_class_by_subject_teacher")!
         var request = URLRequest(url: url)
@@ -168,8 +167,14 @@ class ProgressReportViewController: UIViewController {
                         self.sSessionIDs.append(tempSessionIds)
                     }
                 }
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             } catch let error as NSError {
                 print(error)
+                DispatchQueue.main.async(execute: {
+                    self.processDialog.dismiss(animated: true, completion: nil)
+                })
             }
         }
         task.resume()
@@ -189,7 +194,7 @@ class ProgressReportViewController: UIViewController {
         let user_type = GlobalConst.glb_sUserType!
         let user_id = GlobalConst.glb_sUserId!
         let section_id = self.sSessionIDs[selectedClass][selectedSectionID]
-        
+        present(processDialog, animated: true, completion: nil)
         let url = URL(string: "https://demo.rarome.com/index.php/?api/get_subject_by_teach_teacher")!
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
@@ -247,7 +252,7 @@ class ProgressReportViewController: UIViewController {
         GlobalConst.glb_sectionID = section_id
         GlobalConst.glb_subjectID = self.selectSubjectID
         
-        
+        present(processDialog, animated: true, completion: nil)
         let url = URL(string: "https://demo.rarome.com/index.php/?api/get_students_by_class_section")!
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
