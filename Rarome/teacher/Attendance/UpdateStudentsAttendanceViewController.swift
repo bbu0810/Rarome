@@ -33,12 +33,6 @@ class UpdateStudentsAttendanceViewController: UIViewController, UITableViewDataS
         strButtonStatus.removeAll()
         imgsOfButton.removeAll()
         getFromServer()
-        for _ in sStudentsName{
-            let img_unSelected = UIImage(named: "btn_absentUnselect")
-            imgsOfButton.append(img_unSelected!)
-            let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 50))
-            btn.setImage(img_unSelected, for: .normal)
-        }
         lbl_title.text = sTitle
         tbl_students.frame.size.height = CGFloat(70 * sStudentsName.count)
         
@@ -85,11 +79,11 @@ class UpdateStudentsAttendanceViewController: UIViewController, UITableViewDataS
             options: []) {
             postString = String(data: theJSONData, encoding: .ascii)!
         }
-        present(processDialog, animated: true, completion: nil)
+//        present(processDialog, animated: true, completion: nil)
         
         let url = URL(string: "https://demo.rarome.com/index.php/?api/native_get_attendance_student_list")!
         var request = URLRequest(url: url)
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
         request.httpBody = postString.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -123,7 +117,17 @@ class UpdateStudentsAttendanceViewController: UIViewController, UITableViewDataS
                 }
                 DispatchQueue.main.async(execute: {
                     self.processDialog.dismiss(animated: true, completion: nil)
+                    for index in 0..<self.sStudentsName.count{
+                        if strButtonStatus[index] == "2"{
+                            let img = UIImage(named: "btn_absentUnselect")
+                            imgsOfButton.append(img!)
+                        } else {
+                            let img = UIImage(named: "btn_presentSelected")
+                            imgsOfButton.append(img!)
+                        }
+                    }
                     self.tbl_students.dataSource = self
+                    self.tbl_students.reloadData()
                 })
             } catch let error as NSError {
                 print(error)
