@@ -28,7 +28,6 @@ class AttendanceReportManageViewController: UIViewController, UITableViewDataSou
         tbl_attendance.dataSource = self
         tbl_attendance.delegate = self
         print(sStudentNames)
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,7 +54,9 @@ class AttendanceReportManageViewController: UIViewController, UITableViewDataSou
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var DestinationViewController = segue.destination
+        var DestinationViewController = segue.destination as! AttendanceHistoryViewController
+        DestinationViewController.sMonth = self.sMonth
+        DestinationViewController.sStudent_id = self.sStudentIds[AttendanceReportManageViewController.selectedItem]
     }
 
 }

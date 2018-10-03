@@ -28,6 +28,8 @@
 		D914F5942151DB4D007E8352 /* AttendanceReportManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D914F5932151DB4D007E8352 /* AttendanceReportManageViewController.swift */; };
 		D914F5962151F430007E8352 /* AttendanceRepportManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D914F5952151F430007E8352 /* AttendanceRepportManageTableViewCell.swift */; };
 		D91CCF842136654A00AF4D73 /* TeacherDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91CCF832136654A00AF4D73 /* TeacherDashboardViewController.swift */; };
+		D926AC6A216506A50068420C /* AttendanceHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D926AC69216506A50068420C /* AttendanceHistoryViewController.swift */; };
+		D926AC6C216525310068420C /* AttendanceHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D926AC6B216525310068420C /* AttendanceHistoryTableViewCell.swift */; };
 		D92D357D2113F73300E92EA8 /* GradRoutineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D357C2113F73300E92EA8 /* GradRoutineTableViewCell.swift */; };
 		D92D357F2114000A00E92EA8 /* LibraryInfomationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D357E2114000A00E92EA8 /* LibraryInfomationTableViewCell.swift */; };
 		D92D3581211407D700E92EA8 /* TransportInformationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D3580211407D700E92EA8 /* TransportInformationTableCell.swift */; };
@@ -148,6 +150,8 @@
 		D914F5932151DB4D007E8352 /* AttendanceReportManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceReportManageViewController.swift; sourceTree = "<group>"; };
 		D914F5952151F430007E8352 /* AttendanceRepportManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRepportManageTableViewCell.swift; sourceTree = "<group>"; };
 		D91CCF832136654A00AF4D73 /* TeacherDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherDashboardViewController.swift; sourceTree = "<group>"; };
+		D926AC69216506A50068420C /* AttendanceHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceHistoryViewController.swift; sourceTree = "<group>"; };
+		D926AC6B216525310068420C /* AttendanceHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		D92D357C2113F73300E92EA8 /* GradRoutineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradRoutineTableViewCell.swift; sourceTree = "<group>"; };
 		D92D357E2114000A00E92EA8 /* LibraryInfomationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryInfomationTableViewCell.swift; sourceTree = "<group>"; };
 		D92D3580211407D700E92EA8 /* TransportInformationTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportInformationTableCell.swift; sourceTree = "<group>"; };
@@ -379,6 +383,8 @@
 				D914F5912151B4D9007E8352 /* AttendanceReportViewController.swift */,
 				D914F5932151DB4D007E8352 /* AttendanceReportManageViewController.swift */,
 				D914F5952151F430007E8352 /* AttendanceRepportManageTableViewCell.swift */,
+				D926AC69216506A50068420C /* AttendanceHistoryViewController.swift */,
+				D926AC6B216525310068420C /* AttendanceHistoryTableViewCell.swift */,
 			);
 			path = Attendance;
 			sourceTree = "<group>";
@@ -735,6 +741,7 @@
 				D9038245213B07310062D0C1 /* LeavesTableViewCell.swift in Sources */,
 				D9CB4C19212E273F00606A9A /* EmploymentHistoryDetailTableViewCell.swift in Sources */,
 				D93932B02111A06700183C5B /* StudentDocumentsViewController.swift in Sources */,
+				D926AC6A216506A50068420C /* AttendanceHistoryViewController.swift in Sources */,
 				D92D357F2114000A00E92EA8 /* LibraryInfomationTableViewCell.swift in Sources */,
 				D9700ACF211412F3004528BB /* DomitoryInformationTableCell.swift in Sources */,
 				D97C0B7E213F72AB00D5A5C1 /* SubjectReportTableViewCell.swift in Sources */,
@@ -796,6 +803,7 @@
 				D9A040F5211610EA007CB5E1 /* DetailMedicalHistoryTableViewCell.swift in Sources */,
 				D9EB97532128270A0072D7F5 /* AttendenceHistoryViewController.swift in Sources */,
 				D914F5942151DB4D007E8352 /* AttendanceReportManageViewController.swift in Sources */,
+				D926AC6C216525310068420C /* AttendanceHistoryTableViewCell.swift in Sources */,
 				D9C178BF2101ED3E00588A79 /* HomeViewController.swift in Sources */,
 				D93B454F2111CF2900B4A137 /* StudenDocumentsCell.swift in Sources */,
 				D9D5EDA1214AAF3D00F0B837 /* SchoolFeeTableViewCell.swift in Sources */,
