@@ -13639,6 +13639,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onClick_btnValidate:forEvent:" destination="F5A-iV-hBH" eventType="touchUpInside" id="t91-RE-MkH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

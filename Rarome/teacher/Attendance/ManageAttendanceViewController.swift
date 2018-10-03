@@ -44,6 +44,10 @@ class ManageAttendanceViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var DestinationViewController = segue.destination as! UpdateStudentsAttendanceViewController
+        DestinationViewController.sClassID = self.sClassIDs[selectedClassIndex]
+        DestinationViewController.sSectionID = self.sSectionIDs[selectedClassIndex][selectSectionIndex]
+        DestinationViewController.sDate = self.btn_selectDate.titleLabel?.text ?? "2018-08-10"
+        
         DestinationViewController.sStudentsName = self.sStudentNames
         DestinationViewController.sStudentIds = self.sStudentIds
         DestinationViewController.sStudentImgUrl = self.sStudentImgUrl
