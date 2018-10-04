@@ -25,6 +25,7 @@ class AttendanceRepportManageTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        AttendanceReportManageViewController.selectedItem = indext
     }
     
     @IBAction func onClick_item(_ sender: UIButton, forEvent event: UIEvent) {

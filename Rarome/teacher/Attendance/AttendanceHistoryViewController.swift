@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AttendanceHistoryViewController: UIViewController {
+class AttendanceHistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var tbl_attendanceHistory: UITableView!
     
@@ -33,15 +33,30 @@ class AttendanceHistoryViewController: UIViewController {
     @IBAction func onClick_btnOUtside(_ sender: UIButton, forEvent event: UIEvent) {
         dismiss(animated: true, completion: nil )
     }
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "gotoAttendanceHistoryTableViewCell") as! AttendanceHistoryTableViewCell
+        cell.lblDate.text = sDates[indexPath.row]
+        if sAttendanceStatus[indexPath.row] == "1" {
+            cell.lblAttendanceStatu.text = "Present"
+        }else {
+            cell.lblAttendanceStatu.text = "Absent"
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sDates.count
+    }
+    
     func getDataToServer(){        
         var Param : [String:Any] = [:]
         Param["school_id"] = GlobalConst.glb_sSchoolID!
         Param["running_year"] = GlobalConst.glb_sRunning_year!
         Param["user_type"] = GlobalConst.glb_sUserType!
         Param["user_id"] = GlobalConst.glb_sUserId!
-        Param["student_id"] = sMonth
-        Param["month"] = sStudent_id
+        Param["month"] = sMonth
+        Param["student_id"] = sStudent_id
         var postString = String()
         if let theJSONData = try? JSONSerialization.data(
             withJSONObject: Param,
@@ -53,7 +68,7 @@ class AttendanceHistoryViewController: UIViewController {
         
         let url = URL(string: "https://demo.rarome.com/index.php/?api/native_get_student_month_attendance")!
         var request = URLRequest(url: url)
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
         request.httpBody = postString.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -79,23 +94,21 @@ class AttendanceHistoryViewController: UIViewController {
                 let iStatus = parseData["status"] as! Int
                 let sMessage = parseData["message"] as! String
                 if iStatus == 1 {
-                    DispatchQueue.main.async(execute: {
-                        self.processDialog.dismiss(animated: true, completion: nil)
-                        var alert = UIAlertController(title: "Result", message: sMessage, preferredStyle: UIAlertControllerStyle.alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                            switch action.style{
-                            case .default:
-                                return
-                            case .cancel:
-                                return
-                            case .destructive:
-                                print("destructive")
-                                return
-                            }}))
-                        self.present(alert, animated: true, completion: nil)
-                    })                }
+                    let sAttendaces = parseData["attendance"] as! [[String:Any]]
+                    for sAttendance in sAttendaces {
+                        let date = sAttendance["att_date"] as! String
+                        self.sDates.append(date)
+                        var status = sAttendance["status"] as? String
+                        if status == nil {
+                            status = "0"
+                        }
+                        self.sAttendanceStatus.append(status!)
+                    }
+             }
                 DispatchQueue.main.async(execute: {
                     self.processDialog.dismiss(animated: true, completion: nil)
+                    self.tbl_attendanceHistory.dataSource = self
+                    self.tbl_attendanceHistory.reloadData()
                 })
             } catch let error as NSError {
                 print(error)

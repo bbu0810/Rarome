@@ -17,6 +17,7 @@ class AttendanceReportViewController: UIViewController {
     var sSectionNames = [[String]]()
     let months = ["July", "August", "September", "October", "November", "December", "January", "Feburary", "March", "April", "May", "June"]
     let daysPerMonth = [31, 31, 30, 31, 30, 31, 31, 28, 31, 30, 31, 30]
+    
     @IBOutlet weak var view_top: UIView!
     
     @IBOutlet weak var view_selectClass: UIView!
@@ -58,6 +59,7 @@ class AttendanceReportViewController: UIViewController {
         let sMonthname = months[selectMonthIndex]
         var sTitle = "Attendance For \(sClassName)- \(sSectionsName) fot the month of \(sMonthname)"
         DestinationViewcontroller.sTitle = sTitle
+        DestinationViewcontroller.sMonth = sMonthname
     }
     
     @IBAction func onClick_btnSelectClass(_ sender: UIButton, forEvent event: UIEvent) {
@@ -102,6 +104,9 @@ class AttendanceReportViewController: UIViewController {
     }
     
     @IBAction func onClick_btnManageAttendance(_ sender: UIButton, forEvent event: UIEvent) {
+        if (selectedClassIndex < 0 || selectSectionIndex < 0 || selectMonthIndex < 0) {
+            return
+        }
         getStudentsByClassAndSection()
     }
     
