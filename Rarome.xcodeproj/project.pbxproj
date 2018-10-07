@@ -33,6 +33,9 @@
 		D92D357D2113F73300E92EA8 /* GradRoutineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D357C2113F73300E92EA8 /* GradRoutineTableViewCell.swift */; };
 		D92D357F2114000A00E92EA8 /* LibraryInfomationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D357E2114000A00E92EA8 /* LibraryInfomationTableViewCell.swift */; };
 		D92D3581211407D700E92EA8 /* TransportInformationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D3580211407D700E92EA8 /* TransportInformationTableCell.swift */; };
+		D92D60482168503900C53D09 /* VerifyAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D60472168503900C53D09 /* VerifyAssignmentViewController.swift */; };
+		D92D604A2168614D00C53D09 /* AssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D60492168614D00C53D09 /* AssignmentViewController.swift */; };
+		D92D604C2168DB2D00C53D09 /* ManageAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D604B2168DB2D00C53D09 /* ManageAssignmentViewController.swift */; };
 		D92E4D9C2146DBD1005944B9 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D92E4D9B2146DBD1005944B9 /* LocalAuthentication.framework */; };
 		D92E4D9E214711BC005944B9 /* FingerPrintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92E4D9D214711BC005944B9 /* FingerPrintViewController.swift */; };
 		D92E4DA22147F597005944B9 /* MyProcessDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92E4DA12147F597005944B9 /* MyProcessDialogViewController.swift */; };
@@ -155,6 +158,9 @@
 		D92D357C2113F73300E92EA8 /* GradRoutineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradRoutineTableViewCell.swift; sourceTree = "<group>"; };
 		D92D357E2114000A00E92EA8 /* LibraryInfomationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryInfomationTableViewCell.swift; sourceTree = "<group>"; };
 		D92D3580211407D700E92EA8 /* TransportInformationTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportInformationTableCell.swift; sourceTree = "<group>"; };
+		D92D60472168503900C53D09 /* VerifyAssignmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyAssignmentViewController.swift; sourceTree = "<group>"; };
+		D92D60492168614D00C53D09 /* AssignmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentViewController.swift; sourceTree = "<group>"; };
+		D92D604B2168DB2D00C53D09 /* ManageAssignmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAssignmentViewController.swift; sourceTree = "<group>"; };
 		D92E4D9B2146DBD1005944B9 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		D92E4D9D214711BC005944B9 /* FingerPrintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerPrintViewController.swift; sourceTree = "<group>"; };
 		D92E4DA12147F597005944B9 /* MyProcessDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProcessDialogViewController.swift; sourceTree = "<group>"; };
@@ -330,11 +336,22 @@
 		D91CCF822136651300AF4D73 /* teacher */ = {
 			isa = PBXGroup;
 			children = (
+				D92D604621684FFB00C53D09 /* Assignment */,
 				D97C072821440788009E6623 /* Attendance */,
 				D973B92D213F069E00281170 /* ProgressReport */,
 				D9038246213B0ED30062D0C1 /* Leaves */,
 			);
 			path = teacher;
+			sourceTree = "<group>";
+		};
+		D92D604621684FFB00C53D09 /* Assignment */ = {
+			isa = PBXGroup;
+			children = (
+				D92D60472168503900C53D09 /* VerifyAssignmentViewController.swift */,
+				D92D60492168614D00C53D09 /* AssignmentViewController.swift */,
+				D92D604B2168DB2D00C53D09 /* ManageAssignmentViewController.swift */,
+			);
+			path = Assignment;
 			sourceTree = "<group>";
 		};
 		D946B7FF21191ACF004F9092 /* employeeInfomation */ = {
@@ -727,6 +744,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9EB975121281FAE0072D7F5 /* DesignDialogView.swift in Sources */,
+				D92D604A2168614D00C53D09 /* AssignmentViewController.swift in Sources */,
 				D92E4D9E214711BC005944B9 /* FingerPrintViewController.swift in Sources */,
 				D9EFC750214CFD7700B717D1 /* UpdateStudentsAttendanceViewController.swift in Sources */,
 				D93B45512112C45700B4A137 /* StudentIInfomationViewController.swift in Sources */,
@@ -769,6 +787,7 @@
 				D9D5EDA7214AAF8D00F0B837 /* MessFeeTableViewCell.swift in Sources */,
 				D9A040F32115A7BC007CB5E1 /* MedicalRecordTableViewCell.swift in Sources */,
 				D91323462109F57C001A2E88 /* Grade_WiseViewController.swift in Sources */,
+				D92D604C2168DB2D00C53D09 /* ManageAssignmentViewController.swift in Sources */,
 				D97C072E21441C8E009E6623 /* TeacherAttendanceViewController.swift in Sources */,
 				D999A8672129839100A22151 /* AdsentStudensTableViewController.swift in Sources */,
 				D91CCF842136654A00AF4D73 /* TeacherDashboardViewController.swift in Sources */,
@@ -795,6 +814,7 @@
 				D9D5EDAD214AAFDF00F0B837 /* TransportTerFeeTableViewCell.swift in Sources */,
 				D9C178912100773200588A79 /* AppDelegate.swift in Sources */,
 				D9A091F321078A1A00CDD1CB /* ProfileViewController.swift in Sources */,
+				D92D60482168503900C53D09 /* VerifyAssignmentViewController.swift in Sources */,
 				D973B92F213F074A00281170 /* ProgressReportViewController.swift in Sources */,
 				D97C0B7C213F728100D5A5C1 /* SubjectReportTableViewController.swift in Sources */,
 				D96D9DBA212B552C00A971EF /* DailyAttendanceTableViewController.swift in Sources */,
