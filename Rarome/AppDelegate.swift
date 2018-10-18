@@ -35,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 window?.rootViewController = mainController
             }
         }
-
         return true
     }
 
